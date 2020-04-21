@@ -1,0 +1,1 @@
+Custom base ADMX and ADML files for Adobe products.  These files are required to support the Group Policy Administrative Templates for the different Adobe products.
