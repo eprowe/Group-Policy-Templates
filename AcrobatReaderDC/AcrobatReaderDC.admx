@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
+  <policyNamespaces>
+		<target prefix="AcrobatReaderDC" namespace="Adobe.Policies.AcrobatReaderDC" />
+    <using prefix="Adobe" namespace="Adobe.Policies" />
+    <using prefix="windows" namespace="Microsoft.Policies.Windows" />
+  </policyNamespaces>
+  <resources minRequiredRevision="1.0" />
+  <supportedOn>
+    <definitions>
+      <definition name="SUPPORTED_A" displayName="$(string.SUPPORTED_A)"/>
+    </definitions>
+  </supportedOn>
+  <categories>
+    <category name="CAT_Adobe_Acrobat_Reader_DC" displayName="$(string.CAT_Adobe_Acrobat_Reader_DC)">
+      <parentCategory ref="Adobe:Cat_Adobe"/>
+    </category>
+    <category name="CAT_Adobe_Acrobat_Reader_DC_Lockable" displayName="$(string.CAT_Adobe_Acrobat_Reader_DC_Lockable)">
+      <parentCategory ref="CAT_Adobe_Acrobat_Reader_DC"/>
+    </category>
+    <category name="CAT_Adobe_Acrobat_Reader_DC_Machine" displayName="$(string.CAT_Adobe_Acrobat_Reader_DC_Machine)">
+      <parentCategory ref="CAT_Adobe_Acrobat_Reader_DC"/>
+    </category>
+    <category name="CAT_Adobe_Acrobat_Reader_DC_User" displayName="$(string.CAT_Adobe_Acrobat_Reader_DC_User)">
+      <parentCategory ref="CAT_Adobe_Acrobat_Reader_DC"/>
+    </category>
+  </categories>
+  <policies>
+    <!-- Lockable preferences as defined here: https://www.adobe.com/devnet-docs/acrobatetk/tools/PrefRef/Windows/lockable.html -->
+    <policy name="bEnableProtectedModeAppContainer" class="Machine" displayName="$(string.bEnableProtectedModeAppContainer)" explainText="$(string.bEnableProtectedModeAppContainer_Help)" key="Software\Policies\Adobe\Acrobat Reader\DC\FeatureLockDown" valueName="bEnableProtectedModeAppContainer">
+      <parentCategory ref="CAT_Adobe_Acrobat_Reader_DC_Lockable" />
+      <supportedOn ref="SUPPORTED_A" />
+      <enabledValue><decimal value="1"/></enabledValue>
+      <disabledValue><decimal value="0"/></disabledValue>
+    </policy>
+    <policy name="bAcroSuppressOpenInReader" class="Machine" displayName="$(string.bAcroSuppressOpenInReader)" explainText="$(string.bAcroSuppressOpenInReader_Help)" key="Software\Policies\Adobe\Acrobat Reader\DC\FeatureLockDown" valueName="bAcroSuppressOpenInReader">
+      <parentCategory ref="CAT_Adobe_Acrobat_Reader_DC_Lockable" />
+      <supportedOn ref="SUPPORTED_A" />
+      <enabledValue><decimal value="1"/></enabledValue>
+      <disabledValue><decimal value="0"/></disabledValue>
+    </policy>
+    <policy name="bEnableContextualTips" class="Machine" displayName="$(string.bEnableContextualTips)" explainText="$(string.bEnableContextualTips_Help)" key="Software\Policies\Adobe\Acrobat Reader\DC\FeatureLockDown" valueName="bEnableContextualTips">
+      <parentCategory ref="CAT_Adobe_Acrobat_Reader_DC_Lockable" />
+      <supportedOn ref="SUPPORTED_A" />
+      <enabledValue><decimal value="1"/></enabledValue>
+      <disabledValue><decimal value="0"/></disabledValue>
+    </policy>
+    <policy name="bEnableContextualToolbar" class="Machine" displayName="$(string.bEnableContextualToolbar)" explainText="$(string.bEnableContextualToolbar_Help)" key="Software\Policies\Adobe\Acrobat Reader\DC\FeatureLockDown" valueName="bEnableContextualToolbar">
+      <parentCategory ref="CAT_Adobe_Acrobat_Reader_DC_Lockable" />
+      <supportedOn ref="SUPPORTED_A" />
+      <enabledValue><decimal value="1"/></enabledValue>
+      <disabledValue><decimal value="0"/></disabledValue>
+    </policy>
+    <policy name="bEnableSmartFind" class="Machine" displayName="$(string.bEnableSmartFind)" explainText="$(string.bEnableSmartFind_Help)" key="Software\Policies\Adobe\Acrobat Reader\DC\FeatureLockDown" valueName="bEnableSmartFind">
+      <parentCategory ref="CAT_Adobe_Acrobat_Reader_DC_Lockable" />
+      <supportedOn ref="SUPPORTED_A" />
+      <enabledValue><decimal value="1"/></enabledValue>
+      <disabledValue><decimal value="0"/></disabledValue>
+    </policy>
+    <policy name="bToggleFillSign" class="Machine" displayName="$(string.bToggleFillSign)" explainText="$(string.bToggleFillSign_Help)" key="Software\Policies\Adobe\Acrobat Reader\DC\FeatureLockDown\cServices" valueName="bToggleFillSign">
+      <parentCategory ref="CAT_Adobe_Acrobat_Reader_DC_Lockable" />
+      <supportedOn ref="SUPPORTED_A" />
+      <enabledValue><decimal value="1"/></enabledValue>
+      <disabledValue><decimal value="0"/></disabledValue>
+    </policy>
+    <policy name="Disable_Repair" class="Machine" displayName="$(string.Disable_Repair)" explainText="$(string.Disable_Repair_Help)" key="Software\WOW6432Node\Adobe\Acrobat Reader\DC\Installer" valueName="Disable_Repair">
+      <parentCategory ref="CAT_Adobe_Acrobat_Reader_DC_Lockable" />
+      <supportedOn ref="SUPPORTED_A" />
+      <enabledValue><decimal value="1"/></enabledValue>
+      <disabledValue><decimal value="0"/></disabledValue>
+    </policy>
+    <policy name="DisableMaintenance" class="Machine" displayName="$(string.DisableMaintenance)" explainText="$(string.DisableMaintenance_Help)" key="Software\WOW6432Node\Adobe\Acrobat Reader\DC\Installer" valueName="DisableMaintenance">
+      <parentCategory ref="CAT_Adobe_Acrobat_Reader_DC_Lockable" />
+      <supportedOn ref="SUPPORTED_A" />
+      <enabledValue><decimal value="1"/></enabledValue>
+      <disabledValue><decimal value="0"/></disabledValue>
+    </policy>
+    <policy name="bprintCommentPopups" class="User" displayName="$(string.bprintCommentPopups)" explainText="$(string.bprintCommentPopups_Help)" key="Software\Adobe\Acrobat Reader\DC\Annots\cPrefs" valueName="bprintCommentPopups">
+      <parentCategory ref="CAT_Adobe_Acrobat_Reader_DC_User" />
+      <supportedOn ref="SUPPORTED_A" />
+      <enabledValue><decimal value="1"/></enabledValue>
+      <disabledValue><decimal value="0"/></disabledValue>
+    </policy>
+  </policies>
+</policyDefinitions>

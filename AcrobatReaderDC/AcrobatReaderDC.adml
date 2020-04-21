@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions" revision="1.0" schemaVersion="1.0">
+  <displayName>Adobe Acrobat Reader DC (Modern)</displayName>
+  <description>Adobe Acrobat Reader DC</description>
+  <resources>
+    <stringTable>
+      <string id="SUPPORTED_A">DC (10/13/2015), 10.1.16+, 11.0.13+</string>
+      <string id="SUPPORTED_B">9.0+</string>
+      <string id="SUPPORTED_C">8.0+</string>
+      <string id="SUPPORTED_D">7.x-10.0</string>
+      <string id="CAT_Adobe_Acrobat_Reader_DC">Adobe Acrobat Reader DC</string>
+      <string id="CAT_Adobe_Acrobat_Reader_DC_Lockable">Lockable</string>
+      <string id="CAT_Adobe_Acrobat_Reader_DC_Machine">Adobe Acrobat Reader DC - Machine</string>
+      <string id="CAT_Adobe_Acrobat_Reader_DC_User">Adobe Acrobat Reader DC - User</string>
+      <string id="bEnableProtectedModeAppContainer">Enable and lock the AppContainer sandbox</string>
+      <string id="bEnableProtectedModeAppContainer_Help">This policy configures the 'Run in AppContainer' setting located at Edit > Preferences > Security (Enhanced).
+      
+Enabling this policy will enable the option 'Run in AppContainer' AND disable the option to modify the setting in the UI.
+
+Disabling this policy will disable the option 'Run in AppContainer' AND disable the option to modify the setting in the UI.
+
+This policy modifies the following registry information:
+Key: HKLM\Software\Policies\Adobe\Acrobat Reader\DC\FeatureLockdown
+Value: bEnableProtectedModeAppContainer
+Type: DWORD
+Value: 0-Disabled, 1-Enabled</string>
+      <string id="bAcroSuppressOpenInReader">Disable the PDF viewer Chrome extension</string>
+      <string id="bAcroSuppressOpenInReader_Help">Enabling this policy will disable the PDF viewer Chrome extension.  A tooltip says, "The Acrobat Reader extension is currently disabled.  Please contact your IT admin."
+
+Disabling or not configuring this policy will allow users to open PDFs in Chrome with Acrobat Reader.
+
+This policy modifies the following registry information:
+Key: HKLM\Software\Policies\Adobe\Acrobat Reader\DC\FeatureLockdown
+Value: bAcroSuppressOpenInReader
+Type: DWORD
+Value: 0-Disabled (Default), 1-Enabled</string>
+      <string id="bEnableContextualTips">Enable help tips based on the current context</string>
+      <string id="bEnableContextualTips_Help">Enabling this policy will enable contextual tips.
+
+Disabling or not configuring this policy will disable contextual tips.
+
+This policy modifies the following registry information:
+Key: HKLM\Software\Policies\Adobe\Acrobat Reader\DC\FeatureLockdown
+Value: bEnableContextualTips
+Type: DWORD
+Value: 0-Disabled (Default), 1-Enabled</string>
+      <string id="bEnableContextualToolbar">Enable the context toolbars</string>
+      <string id="bEnableContextualToolbar_Help">Enabling or not configuring this policy will enable context toolbars which are displayed when selecting parts of a PDF object.  For example, selecting text displays text markup tools.  Selecting an image displays sticky note and editing tools.
+
+Disabling this policy will disable the context toolbars.
+
+This policy modifies the following registry information:
+Key: HKLM\Software\Policies\Adobe\Acrobat Reader\DC\FeatureLockdown
+Value: bEnableContextualToolbar
+Type: DWORD
+Value: 0-Disabled, 1-Enabled (Default)</string>
+      <string id="bEnableSmartFind">Enable smart find</string>
+      <string id="bEnableSmartFind_Help">Disabling this policy will disable smart find.
+
+Enabling or not configuring this policy enables smart find.  Smart find autocompletes text as it is entered in the search box.  Search resuls are also highlighted.
+
+This policy modifies the following registry information:
+Key: HKLM\Software\Policies\Adobe\Acrobat Reader\DC\FeatureLockdown
+Value: bEnableSmartFind
+Type: DWORD
+Value: 0-Disabled, 1-Enabled (Default)</string>
+      <string id="bToggleFillSign">Disable Adobe Fill and Sign</string>
+      <string id="bToggleFillSign_Help">Enabling this policy will disable Adobe Fill and Sign and remove it from Tools and the Tools Pane.
+
+Disabling or not configuring this policy enables Adobe Fill and Sign.      
+      
+This policy modifies the following registry information:
+Key: HKLM\Software\Policies\Adobe\Acrobat Reader\DC\FeatureLockdown\cServices
+Value: bToggleFillSign
+Type: DWORD
+Value: 0-Disabled (Default), 1-Enabled</string>
+      <string id="Disable_Repair">Disable the Help > Repair Installation menu for standard users on virtualized installations</string>
+      <string id="Disable_Repair_Help">Enable this setting to disable the Help > Repair Installation menu item for standard users on virtualized installations.</string>
+      <string id="DisableMaintenance">Disable the Help > Repair Installation menu for all users on virtual and regular installs</string>
+      <string id="DisableMaintenance_Help">Enable this setting to disable the Help > Repair Installation menu item for all users including virtual and regular installations.</string>
+      <string id="bprintCommentPopups">Enable 'Print notes and pop-ups'</string>
+      <string id="bprintCommentPopups_Help">Enabling this policy will enable the 'Print notes and pop-ups' setting located at Edit > Preferences > Commenting.
+      
+Disabling this policy will disable the 'Print notes and pop-ups' setting located at Edit > Preferences > Commenting.
+
+Either option can be modified by the user within the UI.
+
+This policy modifies the following registry information:
+Key: HKCU\Software\Adobe\Acrobat Reader\DC\Annots\cPrefs
+Value: bprintCommentPopups
+Type: DWORD
+Value: 0-Disabled, 1-Enabled</string>
+    </stringTable>
+  </resources>
+</policyDefinitionResources>

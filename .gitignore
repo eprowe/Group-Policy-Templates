@@ -1,0 +1,5 @@
+MSSamples/
+TemplateGuides/
+*.code-workspace
+*.cmd
+*.xlsx
