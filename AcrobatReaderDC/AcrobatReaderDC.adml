@@ -12,12 +12,22 @@
       <string id="CAT_Adobe_Acrobat_Reader_DC_Lockable">Lockable</string>
       <string id="CAT_Adobe_Acrobat_Reader_DC_Machine">Adobe Acrobat Reader DC - Machine</string>
       <string id="CAT_Adobe_Acrobat_Reader_DC_User">Adobe Acrobat Reader DC - User</string>
+      <string id="bFindMoreWorkflowsOnline">Disable the menu that opens the online Actions file library</string>
+      <string id="bFindMoreWorkflowsOnline_Help">Enabling this policy will disable the menu item that opens the online Actions file library.
+
+Disabling or not configuring this policy will show the menu item that opens the online Actions file library.
+
+This policy modifies the following registry information:
+Key: HKLM\Software\Policies\Adobe\Acrobat Reader\DC\FeatureLockdown
+Value: bEnableProtectedModeAppContainer
+Type: DWORD
+Value: 1-Disabled (Default), 0-Enabled</string>
       <string id="bEnableProtectedModeAppContainer">Enable and lock the AppContainer sandbox</string>
       <string id="bEnableProtectedModeAppContainer_Help">This policy configures the 'Run in AppContainer' setting located at Edit > Preferences > Security (Enhanced).
       
-Enabling this policy will enable the option 'Run in AppContainer' AND disable the option to modify the setting in the UI.
+Enabling this policy will enable the option 'Run in AppContainer' while disabling the option to modify the setting in the UI.
 
-Disabling this policy will disable the option 'Run in AppContainer' AND disable the option to modify the setting in the UI.
+Disabling this policy will disable the option 'Run in AppContainer' while disabling the option to modify the setting in the UI.
 
 This policy modifies the following registry information:
 Key: HKLM\Software\Policies\Adobe\Acrobat Reader\DC\FeatureLockdown
@@ -68,15 +78,91 @@ Value: 0-Disabled, 1-Enabled (Default)</string>
       <string id="bToggleFillSign_Help">Enabling this policy will disable Adobe Fill and Sign and remove it from Tools and the Tools Pane.
 
 Disabling or not configuring this policy enables Adobe Fill and Sign.      
-      
+
 This policy modifies the following registry information:
 Key: HKLM\Software\Policies\Adobe\Acrobat Reader\DC\FeatureLockdown\cServices
 Value: bToggleFillSign
 Type: DWORD
 Value: 0-Disabled (Default), 1-Enabled</string>
-      <string id="Disable_Repair">Disable the Help > Repair Installation menu for standard users on virtualized installations</string>
+      <string id="bToggleSendACopy">Hide the Send a Copy button from the Fill and Sign tool</string>
+      <string id="bToggleSendACopy_Help">Enabling this policy will hide the Send a Copy buttom from the Fill and Sign tool.
+
+Disabling or not configuring this policy shows the Send a Copy button in the Fill and Sign tool.
+
+This policy modifies the following registry information:
+Key: HKLM\Software\Policies\Adobe\Acrobat Reader\DC\FeatureLockdown\cServices
+Value: bToggleSendACopy
+Type: DWORD
+Value: 0-Enabled, 1-Disabled (Default)</string>
+      <string id="bAdobeSendPluginToggle">Enable Adobe Send and Track</string>
+      <string id="bAdobeSendPluginToggle_Help">When enabled, an Adobe Send and Track button appears in Outlook when composing an email. It enables sending large files as public links through Outlook. The attached files are uploaded to Adobe Document Cloud and public links to the files are inserted in the email body. Recipients can click the link to preview the file in a browser window and can download the file if needed.
+
+Disabling or not configuring this policy will cause the Adobe Send and Track button in Outlook to not be displayed.
+
+This policy modifies the following registry information:
+Key: HKLM\Software\Policies\Adobe\Acrobat Reader\DC\FeatureLockdown\cCloud
+Value: bAdobeSendPluginToggle
+Type: DWORD
+Value: 0-Enabled, 1-Disabled (Default)</string>
+      <string id="bEnablePVCertificateBasedTrust">Show document's certification status in the Protected View's DMB</string>
+      <string id="bEnablePVCertificateBasedTrust_Help">Enabling this policy will display a document's certification status in the Protected View's DMB.
+
+Disabling or not configuring this policy will not show a document's certification status.
+
+This policy modifies the following registry information:
+Key: HKLM\Software\Policies\Adobe\Acrobat Reader\DC\FeatureLockdown
+Value: bEnablePVCertificateBasedTrust
+Type: DWORD
+Value: 0-Disabled (Default), 1-Enabled</string>
+      <string id="bDisableOSTrustedSites">Disable and lock trusting sites from IE</string>
+      <string id="bDisableOSTrustedSites_Help">This policy configures the 'Automatically trust sites from my Win OS security zones' setting located at Edit > Preferences > Security (Enhanced).
+
+Enabling this policy will disable the option 'Automatically trust sites from my Win OS security zones' while disabling the option to modify the setting in the UI.
+
+Disabling this policy will enable the option 'Automatically trust sites from my Win OS security zones' while disabling the option to modify the setting in the UI.
+
+Not configuring this policy will restore the 'Automatically trust sites from my Win OS security zones' to the user selected option (enabled by default) while enabling the option to modify the setting in the UI.
+
+This policy modifies the following registry information:
+Key: HKLM\Software\Policies\Adobe\Acrobat Reader\DC\FeatureLockdown
+Value: bDisableOSTrustedSites
+Type: DWORD
+Value: 0-Disabled, 1-Enabled</string>
+      <string id="bDisableTrustedFolders">Disable trusted files and folders</string>
+      <string id="bDisableTrustedFolders_Help">Enabling this policy disables trusted folders and files while preventing users from specifying a privileged location for directories.
+
+Enabling this policy will disable the 'Add File' and 'Add Folder Path' buttons in the Security (Enhanced) preferences window.
+
+Disabling or not configuring this policy will allow files and folders to be trusted.
+
+This policy modifies the following registry information:
+Key: HKLM\Software\Policies\Adobe\Acrobat Reader\DC\FeatureLockdown
+Value: bDisableTrustedFolders
+Type: DWORD
+Value: 0-Disabled, 1-Enabled</string>
+      <string id="bDisableTrustedSites">Disable and lock host-based privileged locations</string>
+      <string id="bDisableTrustedSites_Help">Enabling this policy disables the ability to specify host-based privileged locations and disables the 'Add Host' button in the Security (Enhanced) preferences window.
+
+Disabling or not configuring this policy enables the ability to specify host-based privileged locations and enables the 'Add Host' button in the Security (Enhanced) preferences window.
+
+This policy modifies the following registry information:
+Key: HKLM\Software\Policies\Adobe\Acrobat Reader\DC\FeatureLockdown
+Value: bDisableTrustedSites
+Type: DWORD
+Value: 0-Disabled, 1-Enabled</string>
+      <string id="bSuppressSignOut">Disable the Help > Sign-in and Sign-out menu items</string>
+      <string id="bSuppressSignOut_Help">Enabling this policy will disable the Sign-in and Sign-out items in the Help menu.
+
+Disabling or not configuring this policy enables the Sign-in and Sign-out items in the Help menu.
+      
+This policy modifies the following registry information:
+Key: HKLM\Software\Policies\Adobe\Acrobat Reader\DC\FeatureLockdown
+Value: bSuppressSignOut
+Type: DWORD
+Value: 0-Disabled (Default), 1-Enabled</string>
+      <string id="Disable_Repair">Disable the Help > Repair Installation menu item for standard users on virtualized installations</string>
       <string id="Disable_Repair_Help">Enable this setting to disable the Help > Repair Installation menu item for standard users on virtualized installations.</string>
-      <string id="DisableMaintenance">Disable the Help > Repair Installation menu for all users on virtual and regular installs</string>
+      <string id="DisableMaintenance">Disable the Help > Repair Installation menu item for all users on virtual and regular installs</string>
       <string id="DisableMaintenance_Help">Enable this setting to disable the Help > Repair Installation menu item for all users including virtual and regular installations.</string>
       <string id="bprintCommentPopups">Enable 'Print notes and pop-ups'</string>
       <string id="bprintCommentPopups_Help">Enabling this policy will enable the 'Print notes and pop-ups' setting located at Edit > Preferences > Commenting.

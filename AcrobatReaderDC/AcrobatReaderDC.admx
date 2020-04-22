@@ -27,6 +27,12 @@
   </categories>
   <policies>
     <!-- Lockable preferences as defined here: https://www.adobe.com/devnet-docs/acrobatetk/tools/PrefRef/Windows/lockable.html -->
+    <policy name="bFindMoreWorkflowsOnline" class="Machine" displayName="$(string.bFindMoreWorkflowsOnline)" explainText="$(string.bFindMoreWorkflowsOnline_Help)" key="Software\Policies\Adobe\Acrobat Reader\DC\FeatureLockDown" valueName="bFindMoreWorkflowsOnline">
+      <parentCategory ref="CAT_Adobe_Acrobat_Reader_DC_Lockable" />
+      <supportedOn ref="SUPPORTED_A" />
+      <enabledValue><decimal value="0"/></enabledValue>
+      <disabledValue><decimal value="1"/></disabledValue>
+    </policy>
     <policy name="bEnableProtectedModeAppContainer" class="Machine" displayName="$(string.bEnableProtectedModeAppContainer)" explainText="$(string.bEnableProtectedModeAppContainer_Help)" key="Software\Policies\Adobe\Acrobat Reader\DC\FeatureLockDown" valueName="bEnableProtectedModeAppContainer">
       <parentCategory ref="CAT_Adobe_Acrobat_Reader_DC_Lockable" />
       <supportedOn ref="SUPPORTED_A" />
@@ -58,6 +64,48 @@
       <disabledValue><decimal value="0"/></disabledValue>
     </policy>
     <policy name="bToggleFillSign" class="Machine" displayName="$(string.bToggleFillSign)" explainText="$(string.bToggleFillSign_Help)" key="Software\Policies\Adobe\Acrobat Reader\DC\FeatureLockDown\cServices" valueName="bToggleFillSign">
+      <parentCategory ref="CAT_Adobe_Acrobat_Reader_DC_Lockable" />
+      <supportedOn ref="SUPPORTED_A" />
+      <enabledValue><decimal value="1"/></enabledValue>
+      <disabledValue><decimal value="0"/></disabledValue>
+    </policy>
+    <policy name="bToggleSendACopy" class="Machine" displayName="$(string.bToggleSendACopy)" explainText="$(string.bToggleSendACopy_Help)" key="Software\Policies\Adobe\Acrobat Reader\DC\FeatureLockDown\cServices" valueName="bToggleSendACopy">
+      <parentCategory ref="CAT_Adobe_Acrobat_Reader_DC_Lockable" />
+      <supportedOn ref="SUPPORTED_A" />
+      <enabledValue><decimal value="0"/></enabledValue>
+      <disabledValue><decimal value="1"/></disabledValue>
+    </policy>
+    <policy name="bAdobeSendPluginToggle" class="Machine" displayName="$(string.bAdobeSendPluginToggle)" explainText="$(string.bAdobeSendPluginToggle_Help)" key="Software\Policies\Adobe\Acrobat Reader\DC\FeatureLockDown\cCloud" valueName="bAdobeSendPluginToggle">
+      <parentCategory ref="CAT_Adobe_Acrobat_Reader_DC_Lockable" />
+      <supportedOn ref="SUPPORTED_A" />
+      <enabledValue><decimal value="0"/></enabledValue>
+      <disabledValue><decimal value="1"/></disabledValue>
+    </policy>
+    <policy name="bEnablePVCertificateBasedTrust" class="Machine" displayName="$(string.bEnablePVCertificateBasedTrust)" explainText="$(string.bEnablePVCertificateBasedTrust_Help)" key="Software\Policies\Adobe\Acrobat Reader\DC\FeatureLockDown" valueName="bEnablePVCertificateBasedTrust">
+      <parentCategory ref="CAT_Adobe_Acrobat_Reader_DC_Lockable" />
+      <supportedOn ref="SUPPORTED_A" />
+      <enabledValue><decimal value="1"/></enabledValue>
+      <disabledValue><decimal value="0"/></disabledValue>
+    </policy>
+    <policy name="bDisableOSTrustedSites" class="Machine" displayName="$(string.bDisableOSTrustedSites)" explainText="$(string.bDisableOSTrustedSites_Help)" key="Software\Policies\Adobe\Acrobat Reader\DC\FeatureLockDown" valueName="bDisableOSTrustedSites">
+      <parentCategory ref="CAT_Adobe_Acrobat_Reader_DC_Lockable" />
+      <supportedOn ref="SUPPORTED_A" />
+      <enabledValue><decimal value="1"/></enabledValue>
+      <disabledValue><decimal value="0"/></disabledValue>
+    </policy>
+    <policy name="bDisableTrustedFolders" class="Machine" displayName="$(string.bDisableTrustedFolders)" explainText="$(string.bDisableTrustedFolders_Help)" key="Software\Policies\Adobe\Acrobat Reader\DC\FeatureLockDown" valueName="bDisableTrustedFolders">
+      <parentCategory ref="CAT_Adobe_Acrobat_Reader_DC_Lockable" />
+      <supportedOn ref="SUPPORTED_A" />
+      <enabledValue><decimal value="1"/></enabledValue>
+      <disabledValue><decimal value="0"/></disabledValue>
+    </policy>
+    <policy name="bDisableTrustedSites" class="Machine" displayName="$(string.bDisableTrustedSites)" explainText="$(string.bDisableTrustedSites_Help)" key="Software\Policies\Adobe\Acrobat Reader\DC\FeatureLockDown" valueName="bDisableTrustedSites">
+      <parentCategory ref="CAT_Adobe_Acrobat_Reader_DC_Lockable" />
+      <supportedOn ref="SUPPORTED_A" />
+      <enabledValue><decimal value="1"/></enabledValue>
+      <disabledValue><decimal value="0"/></disabledValue>
+    </policy>
+    <policy name="bSuppressSignOut" class="Machine" displayName="$(string.bSuppressSignOut)" explainText="$(string.bSuppressSignOut_Help)" key="Software\Policies\Adobe\Acrobat Reader\DC\FeatureLockDown" valueName="bSuppressSignOut">
       <parentCategory ref="CAT_Adobe_Acrobat_Reader_DC_Lockable" />
       <supportedOn ref="SUPPORTED_A" />
       <enabledValue><decimal value="1"/></enabledValue>
