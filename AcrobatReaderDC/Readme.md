@@ -23,8 +23,26 @@ Lockable preferences as documented here: https://www.adobe.com/devnet-docs/acrob
     bDisableTrustedFolders
     bDisableTrustedSites
     bSuppressSignOut
+    bSuppressMessageBar
+    DisableScannedDocumentEditing
+    bEnhancedSecurityInBrowser
+    bEnhancedSecurityStandalone
+    bEnableFlash
+    bAutoFill
+    bIgnoreDataSchema
+    bToggleFTE
+    bToggleShareFeedback
+    bToggleToDoList
+    bToggleToDoTiles
+    bAllowUserToChangeMsgPrefs
+    bDontShowMsgWhenViewingDoc
+    bShowMsgAtLaunch
     Disable_Repair
     DisableMaintenance
+    bCommercialPDF
+    bMergeMenuBar
+    bMixRecentFilesFeatureLockDown
+    bShouldUseScalableCursor
 
 User preferences:
 
