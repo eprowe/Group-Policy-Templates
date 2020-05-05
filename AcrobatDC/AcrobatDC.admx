@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
+  <policyNamespaces>
+		<target prefix="AcrobatDC" namespace="Adobe.Policies.AcrobatDC" />
+    <using prefix="Adobe" namespace="Adobe.Policies" />
+    <using prefix="windows" namespace="Microsoft.Policies.Windows" />
+  </policyNamespaces>
+  <resources minRequiredRevision="1.0" />
+  <categories>
+    <category name="CAT_Adobe_Acrobat_DC" displayName="$(string.CAT_Adobe_Acrobat_DC)">
+      <parentCategory ref="Adobe:Cat_Adobe"/>
+    </category>
+    <category name="CAT_Shared_Action_Folders" displayName="$(string.CAT_Shared_Action_Folders)">
+      <parentCategory ref="CAT_Adobe_Acrobat_DC"/>
+    </category>
+  </categories>
+  <policies>
+    <!-- Lockable preferences as defined here: https://www.adobe.com/devnet-docs/acrobatetk/tools/PrefRef/Windows/lockable.html -->
+    <policy name="IsAMTEnforced" class="Machine" displayName="$(string.IsAMTEnforced)" explainText="$(string.IsAMTEnforced_Help)" key="Software\WOW6432Node\Adobe\Adobe Acrobat\DC\Activation" valueName="IsAMTEnforced">
+      <parentCategory ref="CAT_Adobe_Acrobat_DC" />
+      <supportedOn ref="Adobe:SUPPORTED_001" />
+      <enabledValue><decimal value="1"/></enabledValue>
+      <disabledValue><decimal value="0"/></disabledValue>
+    </policy>
+    <policy name="ADC4275034" class="Machine" displayName="$(string.ADC4275034)" explainText="$(string.ADC4275034_Help)" key="Software\WOW6432Node\Adobe\Adobe Acrobat\DC\FeatureState" valueName="ADC4275034">
+      <parentCategory ref="CAT_Adobe_Acrobat_DC" />
+      <supportedOn ref="Adobe:SUPPORTED_002" />
+      <enabledValue><decimal value="0"/></enabledValue>
+      <disabledValue><decimal value="1"/></disabledValue>
+    </policy>
+    <policy name="ADC4275035" class="Machine" displayName="$(string.ADC4275035)" explainText="$(string.ADC4275035_Help)" key="Software\WOW6432Node\Adobe\Adobe Acrobat\DC\FeatureState" valueName="ADC4275035">
+      <parentCategory ref="CAT_Adobe_Acrobat_DC" />
+      <supportedOn ref="Adobe:SUPPORTED_002" />
+      <enabledValue><decimal value="1"/></enabledValue>
+      <disabledValue><decimal value="0"/></disabledValue>
+    </policy>
+    <policy name="ADC4275035_ClickEdit" class="Machine" displayName="$(string.ADC4275035_ClickEdit)" explainText="$(string.ADC4275035_ClickEdit_Help)" key="Software\WOW6432Node\Adobe\Adobe Acrobat\DC\FeatureState" valueName="ADC4275035_ClickEdit">
+      <parentCategory ref="CAT_Adobe_Acrobat_DC" />
+      <supportedOn ref="Adobe:SUPPORTED_002" />
+      <enabledValue><decimal value="1"/></enabledValue>
+      <disabledValue><decimal value="0"/></disabledValue>
+    </policy>
+    <policy name="ProtectOldExperience" class="Machine" displayName="$(string.ProtectOldExperience)" explainText="$(string.ProtectOldExperience_Help)" key="Software\WOW6432Node\Adobe\Adobe Acrobat\DC\FeatureState" valueName="ProtectOldExperience">
+      <parentCategory ref="CAT_Adobe_Acrobat_DC" />
+      <supportedOn ref="Adobe:SUPPORTED_002" />
+      <enabledValue><decimal value="1"/></enabledValue>
+      <disabledValue><decimal value="0"/></disabledValue>
+    </policy>
+    <policy name="bFindMoreWorkflowsOnline" class="Machine" displayName="$(string.bFindMoreWorkflowsOnline)" explainText="$(string.bFindMoreWorkflowsOnline_Help)" key="Software\Policies\Adobe\Adobe Acrobat\DC\FeatureLockDown" valueName="bFindMoreWorkflowsOnline">
+      <parentCategory ref="CAT_Adobe_Acrobat_DC" />
+      <supportedOn ref="Adobe:SUPPORTED_003" />
+      <enabledValue><decimal value="0"/></enabledValue>
+      <disabledValue><decimal value="1"/></disabledValue>
+    </policy>
+    <!-- Special section just for handling Shared Action Folders due to their complexity -->
+    <policy name="Shared_Action_Folder_01" class="Machine" displayName="$(string.Shared_Action_Folder_01)" explainText="$(string.Shared_Action_Folder_Help)" key="Software\Policies\Adobe\Adobe Acrobat\DC\FeatureLockdown\cWorkflow\cBaseFolders\c0" presentation="$(presentation.Shared_Action_Folder)">
+      <parentCategory ref="CAT_Shared_Action_Folders" />
+      <supportedOn ref="Adobe:SUPPORTED_003" />
+      <elements>
+        <text id="tName" valueName="tName" required="true" />
+        <text id="tDIPath" valueName="tDIPath" required="true" />
+      </elements>
+    </policy>
+    <policy name="Shared_Action_Folder_02" class="Machine" displayName="$(string.Shared_Action_Folder_02)" explainText="$(string.Shared_Action_Folder_Help)" key="Software\Policies\Adobe\Adobe Acrobat\DC\FeatureLockdown\cWorkflow\cBaseFolders\c1" presentation="$(presentation.Shared_Action_Folder)">
+      <parentCategory ref="CAT_Shared_Action_Folders" />
+      <supportedOn ref="Adobe:SUPPORTED_003" />
+      <elements>
+        <text id="tName" valueName="tName" required="true" />
+        <text id="tDIPath" valueName="tDIPath" required="true" />
+      </elements>
+    </policy>
+    <policy name="Shared_Action_Folder_03" class="Machine" displayName="$(string.Shared_Action_Folder_03)" explainText="$(string.Shared_Action_Folder_Help)" key="Software\Policies\Adobe\Adobe Acrobat\DC\FeatureLockdown\cWorkflow\cBaseFolders\c2" presentation="$(presentation.Shared_Action_Folder)">
+      <parentCategory ref="CAT_Shared_Action_Folders" />
+      <supportedOn ref="Adobe:SUPPORTED_003" />
+      <elements>
+        <text id="tName" valueName="tName" required="true" />
+        <text id="tDIPath" valueName="tDIPath" required="true" />
+      </elements>
+    </policy>
+    <policy name="Shared_Action_Folder_04" class="Machine" displayName="$(string.Shared_Action_Folder_04)" explainText="$(string.Shared_Action_Folder_Help)" key="Software\Policies\Adobe\Adobe Acrobat\DC\FeatureLockdown\cWorkflow\cBaseFolders\c3" presentation="$(presentation.Shared_Action_Folder)">
+      <parentCategory ref="CAT_Shared_Action_Folders" />
+      <supportedOn ref="Adobe:SUPPORTED_003" />
+      <elements>
+        <text id="tName" valueName="tName" required="true" />
+        <text id="tDIPath" valueName="tDIPath" required="true" />
+      </elements>
+    </policy>
+    <policy name="Shared_Action_Folder_05" class="Machine" displayName="$(string.Shared_Action_Folder_05)" explainText="$(string.Shared_Action_Folder_Help)" key="Software\Policies\Adobe\Adobe Acrobat\DC\FeatureLockdown\cWorkflow\cBaseFolders\c4" presentation="$(presentation.Shared_Action_Folder)">
+      <parentCategory ref="CAT_Shared_Action_Folders" />
+      <supportedOn ref="Adobe:SUPPORTED_003" />
+      <elements>
+        <text id="tName" valueName="tName" required="true" />
+        <text id="tDIPath" valueName="tDIPath" required="true" />
+      </elements>
+    </policy>
+    <!-- End Shared Action Folders section -->
+    <policy name="bAcroSuppressOpenInReader" class="Machine" displayName="$(string.bAcroSuppressOpenInReader)" explainText="$(string.bAcroSuppressOpenInReader_Help)" key="Software\Policies\Adobe\Adobe Acrobat\DC\FeatureLockDown" valueName="bAcroSuppressOpenInReader">
+      <parentCategory ref="CAT_Adobe_Acrobat_DC" />
+      <supportedOn ref="Adobe:SUPPORTED_004" />
+      <enabledValue><decimal value="1"/></enabledValue>
+      <disabledValue><decimal value="0"/></disabledValue>
+    </policy>
+    <policy name="bEnableContextualTips" class="Machine" displayName="$(string.bEnableContextualTips)" explainText="$(string.bEnableContextualTips_Help)" key="Software\Policies\Adobe\Adobe Acrobat\DC\FeatureLockDown" valueName="bEnableContextualTips">
+      <parentCategory ref="CAT_Adobe_Acrobat_DC" />
+      <supportedOn ref="Adobe:SUPPORTED_005" />
+      <enabledValue><decimal value="1"/></enabledValue>
+      <disabledValue><decimal value="0"/></disabledValue>
+    </policy>
+    <policy name="bEnableContextualToolbar" class="Machine" displayName="$(string.bEnableContextualToolbar)" explainText="$(string.bEnableContextualToolbar_Help)" key="Software\Policies\Adobe\Adobe Acrobat\DC\FeatureLockDown" valueName="bEnableContextualToolbar">
+      <parentCategory ref="CAT_Adobe_Acrobat_DC" />
+      <supportedOn ref="Adobe:SUPPORTED_005" />
+      <enabledValue><decimal value="1"/></enabledValue>
+      <disabledValue><decimal value="0"/></disabledValue>
+    </policy>
+    <policy name="bEnableSmartFind" class="Machine" displayName="$(string.bEnableSmartFind)" explainText="$(string.bEnableSmartFind_Help)" key="Software\Policies\Adobe\Adobe Acrobat\DC\FeatureLockDown" valueName="bEnableSmartFind">
+      <parentCategory ref="CAT_Adobe_Acrobat_DC" />
+      <supportedOn ref="Adobe:SUPPORTED_005" />
+      <enabledValue><decimal value="0"/></enabledValue>
+      <disabledValue><decimal value="1"/></disabledValue>
+    </policy>
+    <policy name="bOrganizePagesFromThumbnails" class="Machine" displayName="$(string.bOrganizePagesFromThumbnails)" explainText="$(string.bOrganizePagesFromThumbnails_Help)" key="Software\Policies\Adobe\Adobe Acrobat\DC\FeatureLockDown" valueName="bOrganizePagesFromThumbnails">
+      <parentCategory ref="CAT_Adobe_Acrobat_DC" />
+      <supportedOn ref="Adobe:SUPPORTED_005" />
+      <enabledValue><decimal value="1"/></enabledValue>
+      <disabledValue><decimal value="0"/></disabledValue>
+    </policy>
+    <policy name="BlockEMFParsing" class="Machine" displayName="$(string.BlockEMFParsing)" explainText="$(string.BlockEMFParsing_Help)" key="Software\WOW6432Node\Adobe\Adobe Acrobat\DC\FeatureState" valueName="BlockEMFParsing">
+      <parentCategory ref="CAT_Adobe_Acrobat_DC" />
+      <supportedOn ref="Adobe:SUPPORTED_009" />
+      <enabledValue><decimal value="0"/></enabledValue>
+      <disabledValue><decimal value="1"/></disabledValue>
+    </policy>
+    <policy name="BlockXPSParsing" class="Machine" displayName="$(string.BlockXPSParsing)" explainText="$(string.BlockXPSParsing_Help)" key="Software\WOW6432Node\Adobe\Adobe Acrobat\DC\FeatureState" valueName="BlockXPSParsing">
+      <parentCategory ref="CAT_Adobe_Acrobat_DC" />
+      <supportedOn ref="Adobe:SUPPORTED_010" />
+      <enabledValue><decimal value="0"/></enabledValue>
+      <disabledValue><decimal value="1"/></disabledValue>
+    </policy>
+    <policy name="bToggleFillSign" class="Machine" displayName="$(string.bToggleFillSign)" explainText="$(string.bToggleFillSign_Help)" key="Software\Policies\Adobe\Adobe Acrobat\DC\FeatureLockDown\cServices" valueName="bToggleFillSign">
+      <parentCategory ref="CAT_Adobe_Acrobat_DC" />
+      <supportedOn ref="Adobe:SUPPORTED_006" />
+      <enabledValue><decimal value="1"/></enabledValue>
+      <disabledValue><decimal value="0"/></disabledValue>
+    </policy>
+    <policy name="bToggleSendACopy" class="Machine" displayName="$(string.bToggleSendACopy)" explainText="$(string.bToggleSendACopy_Help)" key="Software\Policies\Adobe\Adobe Acrobat\DC\FeatureLockDown\cServices" valueName="bToggleSendACopy">
+      <parentCategory ref="CAT_Adobe_Acrobat_DC" />
+      <supportedOn ref="Adobe:SUPPORTED_007" />
+      <enabledValue><decimal value="0"/></enabledValue>
+      <disabledValue><decimal value="1"/></disabledValue>
+    </policy>
+    <policy name="bAdobeSendPluginToggle" class="Machine" displayName="$(string.bAdobeSendPluginToggle)" explainText="$(string.bAdobeSendPluginToggle_Help)" key="Software\Policies\Adobe\Adobe Acrobat\DC\FeatureLockDown\cCloud" valueName="bAdobeSendPluginToggle">
+      <parentCategory ref="CAT_Adobe_Acrobat_DC" />
+      <supportedOn ref="Adobe:SUPPORTED_006" />
+      <enabledValue><decimal value="0"/></enabledValue>
+      <disabledValue><decimal value="1"/></disabledValue>
+    </policy>
+    <policy name="bEnablePVCertificateBasedTrust" class="Machine" displayName="$(string.bEnablePVCertificateBasedTrust)" explainText="$(string.bEnablePVCertificateBasedTrust_Help)" key="Software\Policies\Adobe\Adobe Acrobat\DC\FeatureLockDown" valueName="bEnablePVCertificateBasedTrust">
+      <parentCategory ref="CAT_Adobe_Acrobat_DC" />
+      <supportedOn ref="Adobe:SUPPORTED_008" />
+      <enabledValue><decimal value="1"/></enabledValue>
+      <disabledValue><decimal value="0"/></disabledValue>
+    </policy>
+    <policy name="bDisableOSTrustedSites" class="Machine" displayName="$(string.bDisableOSTrustedSites)" explainText="$(string.bDisableOSTrustedSites_Help)" key="Software\Policies\Adobe\Adobe Acrobat\DC\FeatureLockDown" valueName="bDisableOSTrustedSites">
+      <parentCategory ref="CAT_Adobe_Acrobat_DC" />
+      <supportedOn ref="Adobe:SUPPORTED_011" />
+      <enabledValue><decimal value="1"/></enabledValue>
+      <disabledValue><decimal value="0"/></disabledValue>
+    </policy>
+    <policy name="bDisableTrustedFolders" class="Machine" displayName="$(string.bDisableTrustedFolders)" explainText="$(string.bDisableTrustedFolders_Help)" key="Software\Policies\Adobe\Adobe Acrobat\DC\FeatureLockDown" valueName="bDisableTrustedFolders">
+      <parentCategory ref="CAT_Adobe_Acrobat_DC" />
+      <supportedOn ref="Adobe:SUPPORTED_012" />
+      <enabledValue><decimal value="1"/></enabledValue>
+      <disabledValue><decimal value="0"/></disabledValue>
+    </policy>
+    <policy name="bDisableTrustedSites" class="Machine" displayName="$(string.bDisableTrustedSites)" explainText="$(string.bDisableTrustedSites_Help)" key="Software\Policies\Adobe\Adobe Acrobat\DC\FeatureLockDown" valueName="bDisableTrustedSites">
+      <parentCategory ref="CAT_Adobe_Acrobat_DC" />
+      <supportedOn ref="Adobe:SUPPORTED_012" />
+      <enabledValue><decimal value="1"/></enabledValue>
+      <disabledValue><decimal value="0"/></disabledValue>
+    </policy>
+    <policy name="bSuppressSignOut" class="Machine" displayName="$(string.bSuppressSignOut)" explainText="$(string.bSuppressSignOut_Help)" key="Software\Policies\Adobe\Adobe Acrobat\DC\FeatureLockDown" valueName="bSuppressSignOut">
+      <parentCategory ref="CAT_Adobe_Acrobat_DC" />
+      <supportedOn ref="Adobe:SUPPORTED_006" />
+      <enabledValue><decimal value="1"/></enabledValue>
+      <disabledValue><decimal value="0"/></disabledValue>
+    </policy>
+    <policy name="bSuppressMessageBar" class="Machine" displayName="$(string.bSuppressMessageBar)" explainText="$(string.bSuppressMessageBar_Help)" key="Software\Policies\Adobe\Adobe Acrobat\DC\FeatureLockDown\cDocumentStatus" valueName="bSuppressMessageBar">
+      <parentCategory ref="CAT_Adobe_Acrobat_DC" />
+      <supportedOn ref="Adobe:SUPPORTED_013" />
+      <enabledValue><decimal value="1"/></enabledValue>
+      <disabledValue><decimal value="0"/></disabledValue>
+    </policy>
+    <policy name="DisableScannedDocumentEditing" class="Machine" displayName="$(string.DisableScannedDocumentEditing)" explainText="$(string.DisableScannedDocumentEditing_Help)" key="Software\Adobe\Adobe Acrobat\DC\FeatureState" valueName="DisableScannedDocumentEditing">
+      <parentCategory ref="CAT_Adobe_Acrobat_DC" />
+      <supportedOn ref="Adobe:SUPPORTED_014" />
+      <enabledValue><decimal value="1"/></enabledValue>
+      <disabledValue><decimal value="0"/></disabledValue>
+    </policy>
+    <policy name="bEnhancedSecurityInBrowser" class="Machine" displayName="$(string.bEnhancedSecurityInBrowser)" explainText="$(string.bEnhancedSecurityInBrowser_Help)" key="Software\Policies\Adobe\Adobe Acrobat\DC\FeatureLockDown" valueName="bEnhancedSecurityInBrowser">
+      <parentCategory ref="CAT_Adobe_Acrobat_DC" />
+      <supportedOn ref="Adobe:SUPPORTED_012" />
+      <enabledValue><decimal value="1"/></enabledValue>
+      <disabledValue><decimal value="0"/></disabledValue>
+    </policy>
+    <policy name="bEnhancedSecurityStandalone" class="Machine" displayName="$(string.bEnhancedSecurityStandalone)" explainText="$(string.bEnhancedSecurityStandalone_Help)" key="Software\Policies\Adobe\Adobe Acrobat\DC\FeatureLockDown" valueName="bEnhancedSecurityStandalone">
+      <parentCategory ref="CAT_Adobe_Acrobat_DC" />
+      <supportedOn ref="Adobe:SUPPORTED_012" />
+      <enabledValue><decimal value="1"/></enabledValue>
+      <disabledValue><decimal value="0"/></disabledValue>
+    </policy>
+    <policy name="bEnableFlash" class="Machine" displayName="$(string.bEnableFlash)" explainText="$(string.bEnableFlash_Help)" key="Software\Policies\Adobe\Adobe Acrobat\DC\FeatureLockDown" valueName="bEnableFlash">
+      <parentCategory ref="CAT_Adobe_Acrobat_DC" />
+      <supportedOn ref="Adobe:SUPPORTED_015" />
+      <enabledValue><decimal value="1"/></enabledValue>
+      <disabledValue><decimal value="0"/></disabledValue>
+    </policy>
+    <policy name="bIgnoreDataSchema" class="Machine" displayName="$(string.bIgnoreDataSchema)" explainText="$(string.bIgnoreDataSchema_Help)" key="Software\Policies\Adobe\Adobe Acrobat\DC\FeatureLockDown" valueName="bIgnoreDataSchema">
+      <parentCategory ref="CAT_Adobe_Acrobat_DC" />
+      <supportedOn ref="Adobe:SUPPORTED_013" />
+      <enabledValue><decimal value="1"/></enabledValue>
+      <disabledValue><decimal value="0"/></disabledValue>
+    </policy>
+    <policy name="bToggleFTE" class="Machine" displayName="$(string.bToggleFTE)" explainText="$(string.bToggleFTE_Help)" key="Software\Policies\Adobe\Adobe Acrobat\DC\FeatureLockDown" valueName="bToggleFTE">
+      <parentCategory ref="CAT_Adobe_Acrobat_DC" />
+      <supportedOn ref="Adobe:SUPPORTED_017" />
+      <enabledValue><decimal value="1"/></enabledValue>
+      <disabledValue><decimal value="0"/></disabledValue>
+    </policy>
+    <policy name="bToggleShareFeedback" class="Machine" displayName="$(string.bToggleShareFeedback)" explainText="$(string.bToggleShareFeedback_Help)" key="Software\Policies\Adobe\Adobe Acrobat\DC\FeatureLockDown" valueName="bToggleShareFeedback">
+      <parentCategory ref="CAT_Adobe_Acrobat_DC" />
+      <supportedOn ref="Adobe:SUPPORTED_018" />
+      <enabledValue><decimal value="0"/></enabledValue>
+      <disabledValue><decimal value="1"/></disabledValue>
+    </policy>
+    <policy name="bToggleToDoList" class="Machine" displayName="$(string.bToggleToDoList)" explainText="$(string.bToggleToDoList_Help)" key="Software\Policies\Adobe\Adobe Acrobat\DC\FeatureLockDown" valueName="bToggleToDoList">
+      <parentCategory ref="CAT_Adobe_Acrobat_DC" />
+      <supportedOn ref="Adobe:SUPPORTED_019" />
+      <enabledValue><decimal value="1"/></enabledValue>
+      <disabledValue><decimal value="0"/></disabledValue>
+    </policy>
+    <policy name="bToggleToDoTiles" class="Machine" displayName="$(string.bToggleToDoTiles)" explainText="$(string.bToggleToDoTiles_Help)" key="Software\Policies\Adobe\Adobe Acrobat\DC\FeatureLockDown" valueName="bToggleToDoTiles">
+      <parentCategory ref="CAT_Adobe_Acrobat_DC" />
+      <supportedOn ref="Adobe:SUPPORTED_001" />
+      <enabledValue><decimal value="1"/></enabledValue>
+      <disabledValue><decimal value="0"/></disabledValue>
+    </policy>
+    <policy name="bAllowUserToChangeMsgPrefs" class="Machine" displayName="$(string.bAllowUserToChangeMsgPrefs)" explainText="$(string.bAllowUserToChangeMsgPrefs_Help)" key="Software\Policies\Adobe\Adobe Acrobat\DC\FeatureLockDown\cIPM" valueName="bAllowUserToChangeMsgPrefs">
+      <parentCategory ref="CAT_Adobe_Acrobat_DC" />
+      <supportedOn ref="Adobe:SUPPORTED_020" />
+      <enabledValue><decimal value="0"/></enabledValue>
+      <disabledValue><decimal value="1"/></disabledValue>
+    </policy>
+    <policy name="bDontShowMsgWhenViewingDoc" class="Machine" displayName="$(string.bDontShowMsgWhenViewingDoc)" explainText="$(string.bDontShowMsgWhenViewingDoc_Help)" key="Software\Policies\Adobe\Adobe Acrobat\DC\FeatureLockDown\cIPM" valueName="bDontShowMsgWhenViewingDoc">
+      <parentCategory ref="CAT_Adobe_Acrobat_DC" />
+      <supportedOn ref="Adobe:SUPPORTED_020" />
+      <enabledValue><decimal value="0"/></enabledValue>
+      <disabledValue><decimal value="1"/></disabledValue>
+    </policy>
+    <policy name="bShowMsgAtLaunch" class="Machine" displayName="$(string.bShowMsgAtLaunch)" explainText="$(string.bShowMsgAtLaunch_Help)" key="Software\Policies\Adobe\Adobe Acrobat\DC\FeatureLockDown\cIPM" valueName="bShowMsgAtLaunch">
+      <parentCategory ref="CAT_Adobe_Acrobat_DC" />
+      <supportedOn ref="Adobe:SUPPORTED_020" />
+      <enabledValue><decimal value="0"/></enabledValue>
+      <disabledValue><decimal value="1"/></disabledValue>
+    </policy>
+    <policy name="Disable_Repair" class="Machine" displayName="$(string.Disable_Repair)" explainText="$(string.Disable_Repair_Help)" key="Software\WOW6432Node\Adobe\Adobe Acrobat\DC\Installer" valueName="Disable_Repair">
+      <parentCategory ref="CAT_Adobe_Acrobat_DC" />
+      <supportedOn ref="Adobe:SUPPORTED_021" />
+      <enabledValue><decimal value="1"/></enabledValue>
+      <disabledValue><decimal value="0"/></disabledValue>
+    </policy>
+    <policy name="DisableMaintenance" class="Machine" displayName="$(string.DisableMaintenance)" explainText="$(string.DisableMaintenance_Help)" key="Software\WOW6432Node\Adobe\Adobe Acrobat\DC\Installer" valueName="DisableMaintenance">
+      <parentCategory ref="CAT_Adobe_Acrobat_DC" />
+      <supportedOn ref="Adobe:SUPPORTED_022" />
+      <enabledValue><decimal value="1"/></enabledValue>
+      <disabledValue><decimal value="0"/></disabledValue>
+    </policy>
+    <policy name="bCrashReporterEnabled" class="Machine" displayName="$(string.bCrashReporterEnabled)" explainText="$(string.bCrashReporterEnabled_Help)" key="Software\Policies\Adobe\Adobe Acrobat\DC\FeatureLockDown" valueName="bCrashReporterEnabled">
+      <parentCategory ref="CAT_Adobe_Acrobat_DC" />
+      <supportedOn ref="Adobe:SUPPORTED_024" />
+      <enabledValue><decimal value="0"/></enabledValue>
+      <disabledValue><decimal value="1"/></disabledValue>
+    </policy>
+    <policy name="bMergeMenuBar" class="Machine" displayName="$(string.bMergeMenuBar)" explainText="$(string.bMergeMenuBar_Help)" key="Software\Policies\Adobe\Adobe Acrobat\DC\FeatureLockDown" valueName="bMergeMenuBar">
+      <parentCategory ref="CAT_Adobe_Acrobat_DC" />
+      <supportedOn ref="Adobe:SUPPORTED_002" />
+      <enabledValue><decimal value="1"/></enabledValue>
+      <disabledValue><decimal value="0"/></disabledValue>
+    </policy>
+    <policy name="bMixRecentFilesFeatureLockDown" class="Machine" displayName="$(string.bMixRecentFilesFeatureLockDown)" explainText="$(string.bMixRecentFilesFeatureLockDown_Help)" key="Software\Policies\Adobe\Adobe Acrobat\DC\FeatureLockDown" valueName="bMixRecentFilesFeatureLockDown">
+      <parentCategory ref="CAT_Adobe_Acrobat_DC" />
+      <supportedOn ref="Adobe:SUPPORTED_025" />
+      <enabledValue><decimal value="1"/></enabledValue>
+      <disabledValue><decimal value="0"/></disabledValue>
+    </policy>
+    <policy name="bShouldUseScalableCursor" class="Machine" displayName="$(string.bShouldUseScalableCursor)" explainText="$(string.bShouldUseScalableCursor_Help)" key="Software\Policies\Adobe\Adobe Acrobat\DC\FeatureLockDown" valueName="bShouldUseScalableCursor">
+      <parentCategory ref="CAT_Adobe_Acrobat_DC" />
+      <supportedOn ref="Adobe:SUPPORTED_026" />
+      <enabledValue><decimal value="0"/></enabledValue>
+      <disabledValue><decimal value="1"/></disabledValue>
+    </policy>
+    <policy name="bWinCacheSessionHandles" class="Machine" displayName="$(string.bWinCacheSessionHandles)" explainText="$(string.bWinCacheSessionHandles_Help)" key="Software\Policies\Adobe\Adobe Acrobat\DC\FeatureLockDown\cSecurity\cPPKHandler" valueName="bWinCacheSessionHandles">
+      <parentCategory ref="CAT_Adobe_Acrobat_DC" />
+      <supportedOn ref="Adobe:SUPPORTED_016" />
+      <enabledValue><decimal value="0"/></enabledValue>
+      <disabledValue><decimal value="1"/></disabledValue>
+    </policy>
+    <policy name="dSplitBySizeMaxSize" class="Machine" displayName="$(string.dSplitBySizeMaxSize)" explainText="$(string.dSplitBySizeMaxSize_Help)" presentation="$(presentation.dSplitBySizeMaxSize)" key="Software\Policies\Adobe\Adobe Acrobat\DC\FeatureLockDown">
+      <parentCategory ref="CAT_Adobe_Acrobat_DC" />
+      <supportedOn ref="Adobe:SUPPORTED_024" />
+      <elements>
+        <decimal id="dSplitBySizeMaxSize" valueName="dSplitBySizeMaxSize" required="true" minValue="50" maxValue="1024" />
+      </elements>
+    </policy>
+  </policies>
+</policyDefinitions>

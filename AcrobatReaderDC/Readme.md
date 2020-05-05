@@ -43,7 +43,3 @@ Lockable preferences as documented here: https://www.adobe.com/devnet-docs/acrob
     bMergeMenuBar
     bMixRecentFilesFeatureLockDown
     bShouldUseScalableCursor
-
-User preferences:
-
-    bprintCommentPopups

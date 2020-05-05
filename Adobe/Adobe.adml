@@ -5,6 +5,33 @@
   <resources>
     <stringTable>
       <string id="adobe">Adobe</string>
+      <string id="SUPPORTED_A">DC (10/13/2015), 10.1.16+, 11.0.13+</string>
+      <string id="SUPPORTED_001">December 2018 Continuous track only</string>
+      <string id="SUPPORTED_002">October 2019 and later, continuous track</string>
+      <string id="SUPPORTED_003">11.0+</string>
+      <string id="SUPPORTED_004">January 2017 (DC products)</string>
+      <string id="SUPPORTED_005">May 2019 Continuous track</string>
+      <string id="SUPPORTED_006">DC</string>
+      <string id="SUPPORTED_007">October 2018 continuous track</string>
+      <string id="SUPPORTED_008">11.0.04+</string>
+      <string id="SUPPORTED_009">October 2018 (all tracks, including Classic 2015 and 2017)</string>
+      <string id="SUPPORTED_010">December 2018 (all tracks, including Classic 2015 and 2017)</string>
+      <string id="SUPPORTED_011">9.3 and 8.2+</string>
+      <string id="SUPPORTED_012">9.0+</string>
+      <string id="SUPPORTED_013">8.0+</string>
+      <string id="SUPPORTED_014">DC July 2015</string>
+      <string id="SUPPORTED_015">9.5.1+</string>
+      <string id="SUPPORTED_016">8.1+</string>
+      <string id="SUPPORTED_017">DC (10/13/2015)</string>
+      <string id="SUPPORTED_018">April 2017</string>
+      <string id="SUPPORTED_019">May 9, 2016</string>
+      <string id="SUPPORTED_020">10.0+</string>
+      <string id="SUPPORTED_021">9.x+</string>
+      <string id="SUPPORTED_022">7.x+</string>
+      <string id="SUPPORTED_023"></string>
+      <string id="SUPPORTED_024">February 2020 Continuous track</string>
+      <string id="SUPPORTED_025">October 2018 Continuous track only</string>
+      <string id="SUPPORTED_026">DC 2018: Aug. 2018; DC 2017: May 2018 (both tracks)</string>
     </stringTable>
   </resources>
 </policyDefinitionResources>

@@ -4,6 +4,37 @@
     <target namespace="Adobe.Policies" prefix="Adobe"/>
   </policyNamespaces>
   <resources minRequiredRevision="1.0" />
+  <supportedOn>
+    <definitions>
+      <definition name="SUPPORTED_A" displayName="$(string.SUPPORTED_A)" />
+      <definition name="SUPPORTED_001" displayName="$(string.SUPPORTED_001)" />
+      <definition name="SUPPORTED_002" displayName="$(string.SUPPORTED_002)" />
+      <definition name="SUPPORTED_003" displayName="$(string.SUPPORTED_003)" />
+      <definition name="SUPPORTED_004" displayName="$(string.SUPPORTED_004)" />
+      <definition name="SUPPORTED_005" displayName="$(string.SUPPORTED_005)" />
+      <definition name="SUPPORTED_006" displayName="$(string.SUPPORTED_006)" />
+      <definition name="SUPPORTED_007" displayName="$(string.SUPPORTED_007)" />
+      <definition name="SUPPORTED_008" displayName="$(string.SUPPORTED_008)" />
+      <definition name="SUPPORTED_009" displayName="$(string.SUPPORTED_009)" />
+      <definition name="SUPPORTED_010" displayName="$(string.SUPPORTED_010)" />
+      <definition name="SUPPORTED_011" displayName="$(string.SUPPORTED_011)" />
+      <definition name="SUPPORTED_012" displayName="$(string.SUPPORTED_012)" />
+      <definition name="SUPPORTED_013" displayName="$(string.SUPPORTED_013)" />
+      <definition name="SUPPORTED_014" displayName="$(string.SUPPORTED_014)" />
+      <definition name="SUPPORTED_015" displayName="$(string.SUPPORTED_015)" />
+      <definition name="SUPPORTED_016" displayName="$(string.SUPPORTED_016)" />
+      <definition name="SUPPORTED_017" displayName="$(string.SUPPORTED_017)" />
+      <definition name="SUPPORTED_018" displayName="$(string.SUPPORTED_018)" />
+      <definition name="SUPPORTED_019" displayName="$(string.SUPPORTED_019)" />
+      <definition name="SUPPORTED_020" displayName="$(string.SUPPORTED_020)" />
+      <definition name="SUPPORTED_021" displayName="$(string.SUPPORTED_021)" />
+      <definition name="SUPPORTED_022" displayName="$(string.SUPPORTED_022)" />
+      <definition name="SUPPORTED_023" displayName="$(string.SUPPORTED_023)" />
+      <definition name="SUPPORTED_024" displayName="$(string.SUPPORTED_024)" />
+      <definition name="SUPPORTED_025" displayName="$(string.SUPPORTED_025)" />
+      <definition name="SUPPORTED_026" displayName="$(string.SUPPORTED_026)" />
+    </definitions>
+  </supportedOn>
   <categories>
     <category displayName="$(string.adobe)" name="Cat_Adobe"/>
   </categories>

@@ -1,39 +1,91 @@
 <?xml version="1.0" encoding="utf-8"?>
 <policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions" revision="1.0" schemaVersion="1.0">
-  <displayName>Adobe Acrobat Reader DC (Modern)</displayName>
-  <description>Adobe Acrobat Reader DC</description>
+  <displayName>Adobe Acrobat DC (Modern)</displayName>
+  <description>Adobe Acrobat DC</description>
   <resources>
     <stringTable>
-      <string id="CAT_Adobe_Acrobat_Reader_DC">Adobe Acrobat Reader DC</string>
+      <string id="CAT_Adobe_Acrobat_DC">Adobe Acrobat DC</string>
+      <string id="CAT_Shared_Action_Folders">Shared Action Folders</string>
+      <string id="IsAMTEnforced">Enable deployment on AppV for December 2018 and later</string>
+      <string id="IsAMTEnforced_Help">Enabling this policy is required for Acrobat on AppV.
+
+This policy modifies the following registry information:
+Key: HKLM\Software\WOW6432Node\Adobe\Adobe Acrobat\DC\Activation
+Value: IsAMTEnforced
+Type: DWORD
+Value: 0-Disabled (Default), 1-Enabled</string>
+      <string id="ADC4275034">Disable color picker in the Fill and Sign tool</string>
+      <string id="ADC4275034_Help">Enabling this policy hides/disables the color picker in the Fill and Sign tool.
+
+Disabling or not configuring this policy will show the color picker in the Fill and Sign tool.
+
+This policy modifies the following registry information:
+Key: HKLM\Software\WOW6432Node\Adobe\Adobe Acrobat\DC\FeatureState
+Value: ADC4275034
+Type: DWORD
+Value: 0-Enabled, 1-Disabled (Default)</string>
+      <string id="ADC4275035">Remove AddText and EditText tools from Prepare Form top toolbar</string>
+      <string id="ADC4275035_Help">Enabling this policy hides/disables the AddText and EditText tools from the Prepare Form top toolbar.
+
+Disabling or not configuring this policy will show the AddText and EditText tools in the Prepare Form top toolbar.
+
+This policy modifies the following registry information:
+Key: HKLM\Software\WOW6432Node\Adobe\Adobe Acrobat\DC\FeatureState
+Value: ADC4275035
+Type: DWORD
+Value: 0-Disabled (Default), 1-Enabled</string>
+      <string id="ADC4275035_ClickEdit">Disable automatically entering edit mode</string>
+      <string id="ADC4275035_ClickEdit_Help">Enabling this policy disables automatically entering edit mode when a user clicks a PDF object.
+
+Disabling or not configuring this policy will enable automatically entering edit mode when a user clicks a PDF object.
+
+This policy modifies the following registry information:
+Key: HKLM\Software\WOW6432Node\Adobe\Adobe Acrobat\DC\FeatureState
+Value: ADC4275035_ClickEdit
+Type: DWORD
+Value: 0-Enabled, 1-Disabled (Default)</string>
+      <string id="ProtectOldExperience">Disable the new Protect tool</string>
+      <string id="ProtectOldExperience_Help">Enabling this policy disables the new Protect tool and reverts to the old menu.
+
+Disabling or not configuring this policy will enable the new Protect tool and its menu options.
+
+This policy modifies the following registry information:
+Key: HKLM\Software\WOW6432Node\Adobe\Adobe Acrobat\DC\FeatureState
+Value: ProtectOldExperience
+Type: DWORD
+Value: 0-Disabled (Default), 1-Enabled</string>
+      <string id="Shared_Action_Folder_01">Shared Action Folder 1</string>
+      <string id="Shared_Action_Folder_02">Shared Action Folder 2</string>
+      <string id="Shared_Action_Folder_03">Shared Action Folder 3</string>
+      <string id="Shared_Action_Folder_04">Shared Action Folder 4</string>
+      <string id="Shared_Action_Folder_05">Shared Action Folder 5</string>
+      <string id="Shared_Action_Folder_Help">Enabling this policy allows for the configuration of shared action file directories.  Once enabled all Shared Action Files located within the specified folder are accessible via Tools > Action Wizard.
+
+This policy modifies the following registry information:
+Key: HKLM\Software\Policies\Adobe\Adobe Acrobat\DC\FeatureLockdown\cWorkflow\cBaseFolders\c(index)
+Value: tName - Name of the location
+Type: REG_SZ
+
+Key: HKLM\Software\Policies\Adobe\Adobe Acrobat\DC\FeatureLockdown\cWorkflow\cBaseFolders\c(index)
+Value: tDIPath - Path to the location
+Type: REG_SZ</string>
       <string id="bFindMoreWorkflowsOnline">Disable the menu that opens the online Actions file library</string>
       <string id="bFindMoreWorkflowsOnline_Help">Enabling this policy will disable the menu item that opens the online Actions file library.
 
 Disabling or not configuring this policy will show the menu item that opens the online Actions file library.
 
 This policy modifies the following registry information:
-Key: HKLM\Software\Policies\Adobe\Acrobat Reader\DC\FeatureLockdown
+Key: HKLM\Software\Policies\Adobe\Adobe Acrobat\DC\FeatureLockdown
 Value: bFindMoreWorkflowsOnline
 Type: DWORD
 Value: 1-Disabled (Default), 0-Enabled</string>
-      <string id="bEnableProtectedModeAppContainer">Enable and lock the AppContainer sandbox</string>
-      <string id="bEnableProtectedModeAppContainer_Help">This policy configures the 'Run in AppContainer' setting located at Edit > Preferences > Security (Enhanced).
-
-Enabling this policy will enable the option 'Run in AppContainer' while disabling the option to modify the setting in the UI.
-
-Disabling this policy will disable the option 'Run in AppContainer' while disabling the option to modify the setting in the UI.
-
-This policy modifies the following registry information:
-Key: HKLM\Software\Policies\Adobe\Acrobat Reader\DC\FeatureLockdown
-Value: bEnableProtectedModeAppContainer
-Type: DWORD
-Value: 0-Disabled, 1-Enabled</string>
       <string id="bAcroSuppressOpenInReader">Disable the PDF viewer Chrome extension</string>
       <string id="bAcroSuppressOpenInReader_Help">Enabling this policy will disable the PDF viewer Chrome extension.  A tooltip says, "The Acrobat Reader extension is currently disabled.  Please contact your IT admin."
 
 Disabling or not configuring this policy will allow users to open PDFs in Chrome with Acrobat Reader.
 
 This policy modifies the following registry information:
-Key: HKLM\Software\Policies\Adobe\Acrobat Reader\DC\FeatureLockdown
+Key: HKLM\Software\Policies\Adobe\Adobe Acrobat\DC\FeatureLockdown
 Value: bAcroSuppressOpenInReader
 Type: DWORD
 Value: 0-Disabled (Default), 1-Enabled</string>
@@ -43,17 +95,17 @@ Value: 0-Disabled (Default), 1-Enabled</string>
 Disabling or not configuring this policy will disable contextual tips.
 
 This policy modifies the following registry information:
-Key: HKLM\Software\Policies\Adobe\Acrobat Reader\DC\FeatureLockdown
+Key: HKLM\Software\Policies\Adobe\Adobe Acrobat\DC\FeatureLockdown
 Value: bEnableContextualTips
 Type: DWORD
 Value: 0-Disabled (Default), 1-Enabled</string>
-      <string id="bEnableContextualToolbar">Enable the context toolbars</string>
+      <string id="bEnableContextualToolbar">Enable contextual toolbars</string>
       <string id="bEnableContextualToolbar_Help">Enabling or not configuring this policy will enable context toolbars which are displayed when selecting parts of a PDF object.  For example, selecting text displays text markup tools.  Selecting an image displays sticky note and editing tools.
 
 Disabling this policy will disable the context toolbars.
 
 This policy modifies the following registry information:
-Key: HKLM\Software\Policies\Adobe\Acrobat Reader\DC\FeatureLockdown
+Key: HKLM\Software\Policies\Adobe\Adobe Acrobat\DC\FeatureLockdown
 Value: bEnableContextualToolbar
 Type: DWORD
 Value: 0-Disabled, 1-Enabled (Default)</string>
@@ -63,8 +115,38 @@ Value: 0-Disabled, 1-Enabled (Default)</string>
 Disabling or not configuring this policy enables smart find.  Smart find autocompletes text as it is entered in the search box.  Search resuls are also highlighted.
 
 This policy modifies the following registry information:
-Key: HKLM\Software\Policies\Adobe\Acrobat Reader\DC\FeatureLockdown
+Key: HKLM\Software\Policies\Adobe\Adobe Acrobat\DC\FeatureLockdown
 Value: bEnableSmartFind
+Type: DWORD
+Value: 0-Enabled, 1-Disabled (Default)</string>
+      <string id="bOrganizePagesFromThumbnails">Enable Organize Pages tool shortcut</string>
+      <string id="bOrganizePagesFromThumbnails_Help">Endabling this policy enables the shortcut UI for the Organize tool from thumbnails.
+
+Disabling or not configuring this policy disables the shortcut UI for the Organize tool from the Organize tool from thumbnails.
+
+This policy modifies the following registry information:
+Key: HKLM\Software\Policies\Adobe\Adobe Acrobat\DC\FeatureLockdown
+Value: bOrganizePagesFromThumbnails
+Type: DWORD
+Value: 0-Disabled (Default), 1-Enabled</string>
+      <string id="BlockEMFParsing">Enable EMF conversion to PDF</string>
+      <string id="BlockEMFParsing_Help">Enabling this policy will allow EMF files to be converted to PDF.
+
+Disabling or not configuring this policy disables the ability to convert EMF files to PDFs.
+
+This policy modifies the following registry information:
+Key: HKLM\Software\WOW6432Node\Adobe\Adobe Acrobat\DC\FeatureState
+Value: BlockEMFParsing
+Type: DWORD
+Value: 0-Enabled, 1-Disabled (Default)</string>
+      <string id="BlockXPSParsing">Enable XPS conversion to PDF</string>
+      <string id="BlockXPSParsing_Help">Enabling this policy will allow XPS files to be converted to PDF.
+
+Disabling or not configuring this policy disables the ability to convert EMF files to PDFs.
+
+This policy modifies the following registry information:
+Key: HKLM\Software\WOW6432Node\Adobe\Adobe Acrobat\DC\FeatureState
+Value: BlockXPSParsing
 Type: DWORD
 Value: 0-Enabled, 1-Disabled (Default)</string>
       <string id="bToggleFillSign">Disable Adobe Fill and Sign</string>
@@ -73,7 +155,7 @@ Value: 0-Enabled, 1-Disabled (Default)</string>
 Disabling or not configuring this policy enables Adobe Fill and Sign.      
 
 This policy modifies the following registry information:
-Key: HKLM\Software\Policies\Adobe\Acrobat Reader\DC\FeatureLockdown\cServices
+Key: HKLM\Software\Policies\Adobe\Adobe Acrobat\DC\FeatureLockdown\cServices
 Value: bToggleFillSign
 Type: DWORD
 Value: 0-Disabled (Default), 1-Enabled</string>
@@ -83,7 +165,7 @@ Value: 0-Disabled (Default), 1-Enabled</string>
 Disabling or not configuring this policy shows the Send a Copy button in the Fill and Sign tool.
 
 This policy modifies the following registry information:
-Key: HKLM\Software\Policies\Adobe\Acrobat Reader\DC\FeatureLockdown\cServices
+Key: HKLM\Software\Policies\Adobe\Adobe Acrobat\DC\FeatureLockdown\cServices
 Value: bToggleSendACopy
 Type: DWORD
 Value: 0-Enabled, 1-Disabled (Default)</string>
@@ -93,7 +175,7 @@ Value: 0-Enabled, 1-Disabled (Default)</string>
 Disabling or not configuring this policy will cause the Adobe Send and Track button in Outlook to not be displayed.
 
 This policy modifies the following registry information:
-Key: HKLM\Software\Policies\Adobe\Acrobat Reader\DC\FeatureLockdown\cCloud
+Key: HKLM\Software\Policies\Adobe\Adobe Acrobat\DC\FeatureLockdown\cCloud
 Value: bAdobeSendPluginToggle
 Type: DWORD
 Value: 0-Enabled, 1-Disabled (Default)</string>
@@ -103,7 +185,7 @@ Value: 0-Enabled, 1-Disabled (Default)</string>
 Disabling or not configuring this policy will not show a document's certification status.
 
 This policy modifies the following registry information:
-Key: HKLM\Software\Policies\Adobe\Acrobat Reader\DC\FeatureLockdown
+Key: HKLM\Software\Policies\Adobe\Adobe Acrobat\DC\FeatureLockdown
 Value: bEnablePVCertificateBasedTrust
 Type: DWORD
 Value: 0-Disabled (Default), 1-Enabled</string>
@@ -117,7 +199,7 @@ Disabling this policy will enable the option 'Automatically trust sites from my 
 Not configuring this policy will restore the 'Automatically trust sites from my Win OS security zones' to the user selected option (enabled by default) while enabling the option to modify the setting in the UI.
 
 This policy modifies the following registry information:
-Key: HKLM\Software\Policies\Adobe\Acrobat Reader\DC\FeatureLockdown
+Key: HKLM\Software\Policies\Adobe\Adobe Acrobat\DC\FeatureLockdown
 Value: bDisableOSTrustedSites
 Type: DWORD
 Value: 0-Disabled, 1-Enabled</string>
@@ -129,7 +211,7 @@ Enabling this policy will disable the 'Add File' and 'Add Folder Path' buttons i
 Disabling or not configuring this policy will allow files and folders to be trusted.
 
 This policy modifies the following registry information:
-Key: HKLM\Software\Policies\Adobe\Acrobat Reader\DC\FeatureLockdown
+Key: HKLM\Software\Policies\Adobe\Adobe Acrobat\DC\FeatureLockdown
 Value: bDisableTrustedFolders
 Type: DWORD
 Value: 0-Disabled, 1-Enabled</string>
@@ -139,7 +221,7 @@ Value: 0-Disabled, 1-Enabled</string>
 Disabling or not configuring this policy enables the ability to specify host-based privileged locations and enables the 'Add Host' button in the Security (Enhanced) preferences window.
 
 This policy modifies the following registry information:
-Key: HKLM\Software\Policies\Adobe\Acrobat Reader\DC\FeatureLockdown
+Key: HKLM\Software\Policies\Adobe\Adobe Acrobat\DC\FeatureLockdown
 Value: bDisableTrustedSites
 Type: DWORD
 Value: 0-Disabled, 1-Enabled</string>
@@ -149,7 +231,7 @@ Value: 0-Disabled, 1-Enabled</string>
 Disabling or not configuring this policy enables the Sign-in and Sign-out items in the Help menu.
       
 This policy modifies the following registry information:
-Key: HKLM\Software\Policies\Adobe\Acrobat Reader\DC\FeatureLockdown
+Key: HKLM\Software\Policies\Adobe\Adobe Acrobat\DC\FeatureLockdown
 Value: bSuppressSignOut
 Type: DWORD
 Value: 0-Disabled (Default), 1-Enabled</string>
@@ -159,7 +241,7 @@ Value: 0-Disabled (Default), 1-Enabled</string>
 Disabling or not configuring this policy allows the appearance of the document message bar.
 
 This policy modifies the following registry information:
-Key: HKLM\Software\Policies\Adobe\Acrobat Reader\DC\FeatureLockdown\cDocumentStatus
+Key: HKLM\Software\Policies\Adobe\Adobe Acrobat\DC\FeatureLockdown\cDocumentStatus
 Value: bSuppressMessageBar
 Type: DWORD
 Value: 0-Disabled (Default), 1-Enabled</string>
@@ -169,7 +251,7 @@ Value: 0-Disabled (Default), 1-Enabled</string>
 Disabling or not configuring this policy will enable text recognition when invoking editing on scanned PDFs.
 
 This policy modifies the following registry information:
-Key: HKLM\Software\Policies\Adobe\Acrobat Reader\DC\FeatureLockdown\cDocumentStatus
+Key: HKLM\Software\Policies\Adobe\Adobe Acrobat\DC\FeatureLockdown\cDocumentStatus
 Value: bSuppressMessageBar
 Type: DWORD
 Value: 0-Disabled (Default), 1-Enabled</string>
@@ -179,7 +261,7 @@ Value: 0-Disabled (Default), 1-Enabled</string>
 Enabling or disabling this policy will enable the 'Enable Enhanced Security' while disabling the option to modify the setting in the UI.
 
 This policy modifies the following registry information:
-Key: HKLM\Software\Policies\Adobe\Acrobat Reader\DC\FeatureLockdown
+Key: HKLM\Software\Policies\Adobe\Adobe Acrobat\DC\FeatureLockdown
 Value: bEnhancedSecurityInBrowser
 Type: DWORD
 Value: 0-Disabled, 1-Enabled</string>
@@ -193,7 +275,7 @@ Disabling this policy will disable the option 'Enable Enhanced Security' while d
 Not configuring this policy will restore the 'Enable Enhanced Security' to the user selected option (enabled by default) while enabling the option to modify the setting in the UI.
 
 This policy modifies the following registry information:
-Key: HKLM\Software\Policies\Adobe\Acrobat Reader\DC\FeatureLockdown
+Key: HKLM\Software\Policies\Adobe\Adobe Acrobat\DC\FeatureLockdown
 Value: bEnhancedSecurityStandalone
 Type: DWORD
 Value: 0-Disabled, 1-Enabled</string>
@@ -203,29 +285,17 @@ Value: 0-Disabled, 1-Enabled</string>
 Disabling or not configuring this policy will render Flash content as an empty, white box and does not play.  A yellow message bar will also be displayed at the top of the document stating that 'Some features are disabled to avoid potential security risks.'.
 
 This policy modifies the following registry information:
-Key: HKLM\Software\Policies\Adobe\Acrobat Reader\DC\FeatureLockdown
+Key: HKLM\Software\Policies\Adobe\Adobe Acrobat\DC\FeatureLockdown
 Value: bEnableFlash
 Type: DWORD
 Value: 0-Disabled (Default), 1-Enabled</string>
-      <string id="bAutoFill">Disable and lock auto-complete</string>
-      <string id="bAutoFill_Help">This policy configures the Auto-Complete setting located at Edit > Preferences > Forms.
-
-Enabling this policy will disable Auto-Complete while disabling the option to modify the setting in the UI.
-
-Disabling or not configuring this policy will enable the option to modify the Auto-Complete setting in the UI.
-
-This policy modifies the following registry information:
-Key: HKLM\Software\Policies\Adobe\Acrobat Reader\DC\FeatureLockdown
-Value: bAutoFill
-Type: DWORD
-Value: 0-Disabled, 1-Enabled</string>
       <string id="bIgnoreDataSchema">Save only form data that's part of the schema</string>
       <string id="bIgnoreDataSchema_Help">Enabling this policy will save only the form data related to the form's schema.
 
 Disabling or not configuring this policy will allow all data in a form to be saved.
 
 This policy modifies the following registry information:
-Key: HKLM\Software\Policies\Adobe\Acrobat Reader\DC\FeatureLockdown
+Key: HKLM\Software\Policies\Adobe\Adobe Acrobat\DC\FeatureLockdown
 Value: bIgnoreDataSchema
 Type: DWORD
 Value: 0-Disabled (Default), 1-Enabled</string>
@@ -242,7 +312,7 @@ The First Time Experience (FTE) is also disabled if any of these policies are en
 Disabling or not configuring this policy will enable the First Time Experience (FTE) and the Help > Welcome menu item.
 
 This policy modifies the following registry information:
-Key: HKLM\Software\Policies\Adobe\Acrobat Reader\DC\FeatureLockdown
+Key: HKLM\Software\Policies\Adobe\Adobe Acrobat\DC\FeatureLockdown
 Value: bToggleFTE
 Type: DWORD
 Value: 0-Disabled (Default), 1-Enabled</string>
@@ -255,7 +325,7 @@ The Send Feedback icon is also hidden if the following policy is enabled:
 Disabling or not configuring this policy will show the Send Feedback icon.
 
 This policy modifies the following registry information:
-Key: HKLM\Software\Policies\Adobe\Acrobat Reader\DC\FeatureLockdown
+Key: HKLM\Software\Policies\Adobe\Adobe Acrobat\DC\FeatureLockdown
 Value: bToggleShareFeedback
 Type: DWORD
 Value: 0-Enabled, 1-Disabled (Default)</string>
@@ -265,7 +335,7 @@ Value: 0-Enabled, 1-Disabled (Default)</string>
 Disabling or not configuring this policy will show the to do list of action items.
 
 This policy modifies the following registry information:
-Key: HKLM\Software\Policies\Adobe\Acrobat Reader\DC\FeatureLockdown
+Key: HKLM\Software\Policies\Adobe\Adobe Acrobat\DC\FeatureLockdown
 Value: bToggleToDoList
 Type: DWORD
 Value: 0-Disabled (Default), 1-Enabled</string>
@@ -275,7 +345,7 @@ Value: 0-Disabled (Default), 1-Enabled</string>
 Disabling or not configuring this policy will show the To Do Cards.
 
 This policy modifies the following registry information:
-Key: HKLM\Software\Policies\Adobe\Acrobat Reader\DC\FeatureLockdown
+Key: HKLM\Software\Policies\Adobe\Adobe Acrobat\DC\FeatureLockdown
 Value: bToggleToDoTiles
 Type: DWORD
 Value: 0-Disabled (Default), 1-Enabled</string>
@@ -291,7 +361,7 @@ This policy is intended to be used to lock the following policies:
 Disabling or not configuring this policy will display the 'Messages from Adobe' section of the UI.
 
 This policy modifies the following registry information:
-Key: HKLM\Software\Policies\Adobe\Acrobat Reader\DC\FeatureLockdown\cIPM
+Key: HKLM\Software\Policies\Adobe\Adobe Acrobat\DC\FeatureLockdown\cIPM
 Value: bAllowUserToChangeMsgPrefs
 Type: DWORD
 Value: 0-Enabled, 1-Disabled (Default)</string>
@@ -303,7 +373,7 @@ Enabling this policy will disable the ability to show Adobe messages while viewi
 Disabling or not configuring this policy will enable the ability to show Adobe messages while viewing a document.
 
 This policy modifies the following registry information:
-Key: HKLM\Software\Policies\Adobe\Acrobat Reader\DC\FeatureLockdown\cIPM
+Key: HKLM\Software\Policies\Adobe\Adobe Acrobat\DC\FeatureLockdown\cIPM
 Value: bAllowUserToChangeMsgPrefs
 Type: DWORD
 Value: 0-Enabled (Default), 1-Disabled</string>
@@ -315,7 +385,7 @@ Enabling this policy will disable the ability to show Adobe messages when Acroba
 Disabling or not configuring this policy will enable the ability to show Adobe messages when Acrobat Reader is launched.
 
 This policy modifies the following registry information:
-Key: HKLM\Software\Policies\Adobe\Acrobat Reader\DC\FeatureLockdown\cIPM
+Key: HKLM\Software\Policies\Adobe\Adobe Acrobat\DC\FeatureLockdown\cIPM
 Value: bShowMsgAtLaunch
 Type: DWORD
 Value: 0-Enabled, 1-Disabled (Default)</string>
@@ -325,7 +395,7 @@ Value: 0-Enabled, 1-Disabled (Default)</string>
 Disabling or not configuring this policy will allow the menu to operate normally.
 
 This policy modifies the following registry information:
-Key: HKLM\Software\Wow6432Node\Adobe\Acrobat Reader\DC\Installer
+Key: HKLM\Software\Wow6432Node\Adobe\Adobe Acrobat\DC\Installer
 Value: Disable_Repair
 Type: DWORD
 Value: 0-Disabled (Default), 1-Enabled</string>
@@ -335,27 +405,27 @@ Value: 0-Disabled (Default), 1-Enabled</string>
 Disabling or not configuring this policy will allow the menu to operate normally.
 
 This policy modifies the following registry information:
-Key: HKLM\Software\Wow6432Node\Adobe\Acrobat Reader\DC\Installer
+Key: HKLM\Software\Wow6432Node\Adobe\Adobe Acrobat\DC\Installer
 Value: DisableMaintenance
 Type: DWORD
 Value: 0-Disabled (Default), 1-Enabled</string>
-      <string id="bCommercialPDF">Disable and lock a PDFs ability to display ads</string>
-      <string id="bCommercialPDF_Help">Enabling this policy will disable and lock the ability to display ads within a PDF document.
+      <string id="bCrashReporterEnabled">Disable crash reporter</string>
+      <string id="bCrashReporterEnabled_Help">Enabling this policy will disable the crash reporter dialog on application crash.
 
-Disabling or not configuring this policy will allow the display of ads within a PDF.
+Disabling or not configuring this policy enables the crash reporter dialog and allows users to send crash logs to the CrashReporter team.
 
 This policy modifies the following registry information:
-Key: HKLM\Software\Policies\Adobe\Acrobat Reader\DC\FeatureLockdown
-Value: bCommercialPDF
+Key: HKLM\Software\Policies\Adobe\Adobe Acrobat\DC\FeatureLockdown
+Value: bCrashReporterEnabled
 Type: DWORD
-Value: 0-Disabled (Default), 1-Enabled</string>
+Value: 0-Enabled, 1-Disabled (Default)</string>
       <string id="bMergeMenuBar">Merge title bar and menu bar into a single bar</string>
       <string id="bMergeMenuBar_Help">Enabling this policy will merge the application's title bar and menu bar into a single bar.
 
 Disabling or not configuring this policy will keep the application's title bar and menu bar separate.
 
 This policy modifies the following registry information:
-Key: HKLM\Software\Policies\Adobe\Acrobat Reader\DC\FeatureLockdown
+Key: HKLM\Software\Policies\Adobe\Adobe Acrobat\DC\FeatureLockdown
 Value: bMergeMenuBar
 Type: DWORD
 Value: 0-Disabled (Default), 1-Enabled</string>
@@ -365,7 +435,7 @@ Value: 0-Disabled (Default), 1-Enabled</string>
 Disabling or not configuring this policy allows shared files to appear in the Recent list when a user successfully shares a file as well as when a recipient accepts an invite to the shared file workflow.      
 
 This policy modifies the following registry information:
-Key: HKLM\Software\Policies\Adobe\Acrobat Reader\DC\FeatureLockdown
+Key: HKLM\Software\Policies\Adobe\Adobe Acrobat\DC\FeatureLockdown
 Value: bMixRecentFilesFeatureLockDown
 Type: DWORD
 Value: 0-Disabled (Default), 1-Enabled</string>
@@ -375,10 +445,42 @@ Value: 0-Disabled (Default), 1-Enabled</string>
 Disabling or not configuring this policy enables the use of a scalable cursor.
 
 This policy modifies the following registry information:
-Key: HKLM\Software\Policies\Adobe\Acrobat Reader\DC\FeatureLockdown
+Key: HKLM\Software\Policies\Adobe\Adobe Acrobat\DC\FeatureLockdown
 Value: bShouldUseScalableCursor
 Type: DWORD
 Value: 0-Enabled, 1-Enabled (Default)</string>
+      <string id="bWinCacheSessionHandles">Disable the retention of cryptographic service provider (CSP) handles when a user authenticates to a digital ID</string>
+      <string id="bWinCacheSessionHandles_Help">Enabling this policy disables the retention of CSP handles when a user authenticates to a digital ID.
+
+Disabling or not configuring this allows the retention of CSP handles until a user logs out or their session ends.  For example, smart card users won't have to enter their PIN with each use.
+
+This policy modifies the following registry information:
+Key: HKLM\Software\Policies\Adobe\Adobe Acrobat\DC\FeatureLockDown\cSecurity\cPPKHandler
+Value: bWinCacheSessionHandles
+Type: DWORD
+Value: 0-Enabled, 1-Enabled (Default)</string>
+      <string id="dSplitBySizeMaxSize">Specify the file size into which a file may be split</string>
+      <string id="dSplitBySizeMaxSize_Help">Enabling this policy set the file size for split files.  Supported values are between 50 and 1024 MB.
+
+Disabling or not configuring this policy retains the default settings of 50 MB.
+
+This policy modifies the following registry information:
+Key: HKLM\Software\Policies\Adobe\Adobe Acrobat\DC\FeatureLockDown
+Value: dSplitBySizeMaxSize
+Type: DWORD
+Value: 50 (default)-1024</string>
     </stringTable>
+    <presentationTable>
+      <presentation id="Shared_Action_Folder">
+            <text>Shared folder name (tName):</text>
+            <textBox refId="tName"><label/></textBox>
+            <text>Shared folder path (tDIPath):</text>
+            <textBox refId="tDIPath"><label/></textBox>
+            <text>NOTE: The path should follow the syntax for absolute file specifications documented in Section 3.10.1 File Specification Strings in the PDF Reference, version 1.7 or later.</text>
+      </presentation>
+      <presentation id="dSplitBySizeMaxSize">
+        <decimalTextBox refId="dSplitBySizeMaxSize" defaultValue="50" spin="false">File size in MB (50-1024):</decimalTextBox>
+      </presentation>
+    </presentationTable>
   </resources>
 </policyDefinitionResources>
