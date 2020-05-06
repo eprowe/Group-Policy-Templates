@@ -6,7 +6,6 @@
   <resources minRequiredRevision="1.0" />
   <supportedOn>
     <definitions>
-      <definition name="SUPPORTED_A" displayName="$(string.SUPPORTED_A)" />
       <definition name="SUPPORTED_001" displayName="$(string.SUPPORTED_001)" />
       <definition name="SUPPORTED_002" displayName="$(string.SUPPORTED_002)" />
       <definition name="SUPPORTED_003" displayName="$(string.SUPPORTED_003)" />
@@ -33,6 +32,8 @@
       <definition name="SUPPORTED_024" displayName="$(string.SUPPORTED_024)" />
       <definition name="SUPPORTED_025" displayName="$(string.SUPPORTED_025)" />
       <definition name="SUPPORTED_026" displayName="$(string.SUPPORTED_026)" />
+      <definition name="SUPPORTED_027" displayName="$(string.SUPPORTED_027)" />
+      <definition name="SUPPORTED_028" displayName="$(string.SUPPORTED_028)" />
     </definitions>
   </supportedOn>
   <categories>

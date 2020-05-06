@@ -82,6 +82,7 @@ Lockable preferences as documented here: https://www.adobe.com/devnet-docs/acrob
 * dSplitBySizeMaxSize
 ## Mobile Link ##
 ## Network and Protocol Access ##
+Due to the poorly documented nature of the following settings I'm not going to include them in these template files.  The documentation is unclear on what these settings are, how they can be modified, or what each value should be configured as.  For example, tSchemePerms has what appears to be a list of URI Schemes followed by a number, but there is no indication what the number value represents.  A search seems to indicate that a 3 restricts the user of the protocol, but nothing about what a 1 does.  Additionally, Adobe indicates that these values may be regulary updated so it may be best to leave them for Adobe to manage.
 * cDefaultLaunchURLPerms
 * tFlashContentSchemeWhiteList
 * tSchemePerms
@@ -92,7 +93,7 @@ Lockable preferences as documented here: https://www.adobe.com/devnet-docs/acrob
 * bDisablePDFRedirectionActions
 ## PDF Ownership ##
 * bDisablePDFHandlerSwitching
-* bEnableAcrobatPromptForDocOpen
+* bEnableAcrobatPromptForDocOpen - This policy is intended for Adobe Acrobat Reader
 * bHasAcrobatConsent
 * bTogglePDFOwnershipToasts
 ## Removing Tools ##

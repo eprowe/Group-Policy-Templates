@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions" revision="1.0" schemaVersion="1.0">
-  <displayName>Adobe Acrobat DC (Modern)</displayName>
+<displayName>Adobe Acrobat DC (Modern)</displayName>
   <description>Adobe Acrobat DC</description>
   <resources>
     <stringTable>
@@ -469,17 +469,141 @@ Key: HKLM\Software\Policies\Adobe\Adobe Acrobat\DC\FeatureLockDown
 Value: dSplitBySizeMaxSize
 Type: DWORD
 Value: 50 (default)-1024</string>
+      <string id="bAllowPasswordSaving">Disable password caching</string>
+      <string id="bAllowPasswordSaving_Help">Enabling this policy disables password caching and will require users to always enter a password when required.
+
+Disabling or not configuring this policy enables password caching so that users will not always have to enter a password when one is required. This feature affects Adobe LiveCycle Rights Management Server log in, signing with digital IDs in the Acrobat store (pfx or p12 files), changing password timeout policies, and creating new password security policies.
+
+This policy modifies the following registry information:
+Key: HKLM\Software\Policies\Adobe\Adobe Acrobat\DC\FeatureLockdown\cSecurity\cPPKLite
+Value: bAllowPasswordSaving
+Type: DWORD
+Value: 0-Enabled, 1-Disabled (Default)</string>
+      <string id="bDisablePDFRedirectionActions">Block specific PDF actions which result in opening a link</string>
+      <string id="bDisablePDFRedirectionActions_Help">Enabling this policy will block a PDF action that open links, including GoToE, GoToR, Launch, Thread, Import Data, Export Form Data, Submit Form, and Reset Form. 
+
+Disabling or not configuring this policy allows the above listed actions to open links.
+
+This policy modifies the following registry information:
+Key: HKLM\Software\Policies\Adobe\Adobe Acrobat\DC\FeatureLockdown
+Value: bDisablePDFRedirectionActions
+Type: DWORD
+Value: 0-Disabled (Default), 1-Enabled</string>
+      <string id="bDisablePDFHandlerSwitching">Disable the ability to change the default PDF handler</string>
+      <string id="bDisablePDFHandlerSwitching_Help">Enabling this policy will disables the user's ability to change the default PDF handler.  This setting is available at Edit > Preferences > General > Select Default PDF Handler.
+
+Disabling or not configuring this policy allows the user to choose which Adobe application, Acrobat Pro or Reader, will be used to open PDFs by default.
+
+This policy modifies the following registry information:
+Key: HKLM\Software\Policies\Adobe\Adobe Acrobat\DC\FeatureLockdown
+Value: bDisablePDFHandlerSwitching
+Type: DWORD
+Value: 0-Disabled (Default), 1-Enabled</string>
+      <string id="bHasAcrobatConsent">Automatically open Acrobat for the current file</string>
+      <string id="bHasAcrobatConsent_Help">Enabling this policy will have the Reader process automatically open Acrobat for the current file.  PDF ownership doesn't change.
+
+Disabling or not configuring this policy will have Reader continue to use the Reader process for opening the current file.
+
+This policy modifies the following registry information:
+Key: HKLM\Software\Policies\Adobe\Adobe Acrobat\DC\FeatureLockdown
+Value: bHasAcrobatConsent
+Type: DWORD
+Value: 0-Disabled (Default), 1-Enabled</string>
+      <string id="bTogglePDFOwnershipToasts">Disable startup notification allowing users to make Acrobat the default PDF viewer</string>
+      <string id="bTogglePDFOwnershipToasts_Help">Enabling this policy will suppress a notification that appears on machine startup allowing the user to make Acrobat the default PDF viewer.
+
+Disabling or not configuring this policy and when both Acrobat and Reader are installed, the user can click on the notification to change the default PDF viewer.
+
+This policy modifies the following registry information:
+Key: HKLM\Software\Policies\Adobe\Adobe Acrobat\DC\FeatureLockdown\cServices
+Value: bTogglePDFOwnershipToasts
+Type: DWORD
+Value: 0-Disabled (Default), 1-Enabled</string>
+      <string id="Removing_Tools">Remove specified tools</string>
+      <string id="Removing_Tools_Help">Enabling this policy will allow you to input the tools to be hidden from the user interface, effectively disabling them.
+
+Input the "Tool ID" of the tool(s) you wish to remove in the listbox provided.
+
+Valid options include, listed in order of appearance in the UI:
+      Tool ID - Tool title
+      *****Create and Edit*****
+      CreatePDFApp - Create PDF
+      CombineApp - Combine Files
+      PagesApp - Organize Pages
+      EditPDFApp - Edit PDF
+      ExportPDFApp - Export PDF
+      PaperToPDFApp - Enhance Scans (Scan and OCR)
+      RichMediaApp - Rich Media
+
+      *****Share and Review*****
+      SendAppFull - Share
+      ReviewApp - Send for Review (Send for Comments)
+      CommentApp - Comment
+      StampApp - Stamp
+      CompareApp - Compare Files
+      MeasureApp - Measure
+
+      *****Forms and Signatures*****
+      FillSignApp - Fill and Sign
+      FormsApp - Prepare Form
+      CollectSignaturesApp - Adobe Sign
+      CertificatesApp - Certificates
+
+      *****Protect and Standardize*****
+      ProtectApp - Protect
+      RedactApp - Redact
+      StandardsApp - PDF Standards
+      OptimizePDFApp - Optimize PDF
+      PrintProductionApp - Print Production
+      AccessibilityApp - Accessibility
+
+      *****Customize*****
+      CreateCustomUIApp - Create Custom Tool
+      ActionsApp - Action Wizard
+      IndexApp - Index
+      DeveloperApp - JavaScript
+
+      ToolsCenter - Tools (Hides entire tools pallette/tab)
+      AVHome - Home (Hides entire home pallette/tab)
+      Viewer - Viewer (Unknown effect)
+      InAppSigningApp - {none} (Unknown effect)
+      HomeWelcomeApp - Home Welcome (Unknown effect)
+      UnifiedShareApp - UnifiedShare (Unknown effect)
+      MoreToolRHP - More Tools (Hides 'More Tools' option in right hand pane)
+
+Disabling or not configuring this policy enables and displays all available tools within the interface.      
+</string>
+      <string id="bDisableAcrobatShortcutCustomization">Disable customization of right hand pane </string>
+      <string id="bDisableAcrobatShortcutCustomization_Help">Enabling this policy prevents users from customizing the right hand pane of tool shortcuts.
+
+Disabling or not configuring this policy will allow users to customize the right hand pane of tool shortcuts.
+
+This policy modifies the following registry information:
+Key: HKLM\Software\Policies\Adobe\Adobe Acrobat\DC\FeatureLockdown\cAcroApp
+Value: bDisableAcrobatShortcutCustomization
+Type: DWORD
+Value: 0-Disabled (Default), 1-Enabled</string>
     </stringTable>
     <presentationTable>
       <presentation id="Shared_Action_Folder">
-            <text>Shared folder name (tName):</text>
-            <textBox refId="tName"><label/></textBox>
-            <text>Shared folder path (tDIPath):</text>
-            <textBox refId="tDIPath"><label/></textBox>
-            <text>NOTE: The path should follow the syntax for absolute file specifications documented in Section 3.10.1 File Specification Strings in the PDF Reference, version 1.7 or later.</text>
+        <text>Shared folder name (tName):</text>
+          <textBox refId="tName"><label/></textBox>
+          <text>Shared folder path (tDIPath):</text>
+          <textBox refId="tDIPath"><label/></textBox>
+          <text>NOTE: The path should follow the syntax for absolute file specifications documented in Section 3.10.1 File Specification Strings in the PDF Reference, version 1.7 or later.</text>
       </presentation>
       <presentation id="dSplitBySizeMaxSize">
         <decimalTextBox refId="dSplitBySizeMaxSize" defaultValue="50" spin="false">File size in MB (50-1024):</decimalTextBox>
+      </presentation>
+      <presentation id="Removing_Tools">
+        <listBox refId="Removing_Tools">Tools to remove:</listBox>
+        <textBox refId="Removing_Tools_a0">
+          <label>Dummy value, don't edit</label>
+          <defaultValue>{null}</defaultValue>
+        </textBox>
+        <text>Acrobat expects values to start with a0</text>
+        <text>An ADMX list Element using a valuePrefix starts with 1</text>
+        <text>This adds an extra registry key so Acrobat will process the list</text>
       </presentation>
     </presentationTable>
   </resources>

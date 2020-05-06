@@ -311,5 +311,49 @@
         <decimal id="dSplitBySizeMaxSize" valueName="dSplitBySizeMaxSize" required="true" minValue="50" maxValue="1024" />
       </elements>
     </policy>
+    <policy name="bAllowPasswordSaving" class="Machine" displayName="$(string.bAllowPasswordSaving)" explainText="$(string.bAllowPasswordSaving_Help)" key="Software\Policies\Adobe\Adobe Acrobat\DC\FeatureLockDown\cSecurity\cPPKLite" valueName="bAllowPasswordSaving">
+      <parentCategory ref="CAT_Adobe_Acrobat_DC" />
+      <supportedOn ref="Adobe:SUPPORTED_023" />
+      <enabledValue><decimal value="0"/></enabledValue>
+      <disabledValue><decimal value="1"/></disabledValue>
+    </policy>
+    <policy name="bDisablePDFRedirectionActions" class="Machine" displayName="$(string.bDisablePDFRedirectionActions)" explainText="$(string.bDisablePDFRedirectionActions_Help)" key="Software\Policies\Adobe\Adobe Acrobat\DC\FeatureLockDown" valueName="bDisablePDFRedirectionActions">
+      <parentCategory ref="CAT_Adobe_Acrobat_DC" />
+      <supportedOn ref="Adobe:SUPPORTED_027" />
+      <enabledValue><decimal value="1"/></enabledValue>
+      <disabledValue><decimal value="0"/></disabledValue>
+    </policy>
+    <policy name="bDisablePDFHandlerSwitching" class="Machine" displayName="$(string.bDisablePDFHandlerSwitching)" explainText="$(string.bDisablePDFHandlerSwitching_Help)" key="Software\Policies\Adobe\Adobe Acrobat\DC\FeatureLockDown" valueName="bDisablePDFHandlerSwitching">
+      <parentCategory ref="CAT_Adobe_Acrobat_DC" />
+      <supportedOn ref="Adobe:SUPPORTED_028" />
+      <enabledValue><decimal value="1"/></enabledValue>
+      <disabledValue><decimal value="0"/></disabledValue>
+    </policy>
+    <policy name="bHasAcrobatConsent" class="Machine" displayName="$(string.bHasAcrobatConsent)" explainText="$(string.bHasAcrobatConsent_Help)" key="Software\Policies\Adobe\Adobe Acrobat\DC\FeatureLockDown" valueName="bHasAcrobatConsent">
+      <parentCategory ref="CAT_Adobe_Acrobat_DC" />
+      <supportedOn ref="Adobe:SUPPORTED_002" />
+      <enabledValue><decimal value="1"/></enabledValue>
+      <disabledValue><decimal value="0"/></disabledValue>
+    </policy>
+    <policy name="bTogglePDFOwnershipToasts" class="Machine" displayName="$(string.bTogglePDFOwnershipToasts)" explainText="$(string.bTogglePDFOwnershipToasts_Help)" key="Software\Policies\Adobe\Adobe Acrobat\DC\FeatureLockDown\cServices" valueName="bTogglePDFOwnershipToasts">
+      <parentCategory ref="CAT_Adobe_Acrobat_DC" />
+      <supportedOn ref="Adobe:SUPPORTED_005" />
+      <enabledValue><decimal value="1"/></enabledValue>
+      <disabledValue><decimal value="0"/></disabledValue>
+    </policy>
+    <policy name="Removing_Tools" class="Machine" displayName="$(string.Removing_Tools)" explainText="$(string.Removing_Tools_Help)" key="Software\Policies\Adobe\Adobe Acrobat\DC\FeatureLockDown\cAcroApp\cDisabled" presentation="$(presentation.Removing_Tools)">
+      <parentCategory ref="CAT_Adobe_Acrobat_DC" />
+      <supportedOn ref="Adobe:SUPPORTED_006" />
+      <elements>
+         <list id="Removing_Tools" key="Software\Policies\Adobe\Adobe Acrobat\DC\FeatureLockDown\cAcroApp\cDisabled" valuePrefix="a" />
+         <text id="Removing_Tools_a0" valueName="a0" />
+      </elements>
+    </policy>
+    <policy name="bDisableAcrobatShortcutCustomization" class="Machine" displayName="$(string.bDisableAcrobatShortcutCustomization)" explainText="$(string.bDisableAcrobatShortcutCustomization_Help)" key="Software\Policies\Adobe\Adobe Acrobat\DC\FeatureLockDown\cServices" valueName="bDisableAcrobatShortcutCustomization">
+      <parentCategory ref="CAT_Adobe_Acrobat_DC" />
+      <supportedOn ref="Adobe:SUPPORTED_006" />
+      <enabledValue><decimal value="1"/></enabledValue>
+      <disabledValue><decimal value="0"/></disabledValue>
+    </policy>
   </policies>
 </policyDefinitions>
