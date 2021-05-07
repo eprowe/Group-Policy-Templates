@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
+  <policyNamespaces>
+		<target prefix="AcrobatDC" namespace="Adobe.Policies.AcrobatDC" />
+    <using prefix="Adobe" namespace="Adobe.Policies" />
+    <using prefix="windows" namespace="Microsoft.Policies.Windows" />
+  </policyNamespaces>
+  <resources minRequiredRevision="1.0" />
+  <categories>
+    <category name="CAT_Adobe_Acrobat_DC" displayName="$(string.CAT_Adobe_Acrobat_DC)">
+      <parentCategory ref="Adobe:Cat_Adobe"/>
+    </category>
+    <category name="CAT_Adobe_Acrobat_DC_Lockable_Preferences" displayName="$(string.CAT_Adobe_Acrobat_DC_Lockable_Preferences)">
+      <parentCategory ref="CAT_Adobe_Acrobat_DC"/>
+    </category>
+  </categories>
+  <policies>
+    <!-- 3D Settings -->
+    <policy name="b3DEnableContent" class="User" displayName="$(string.b3DEnableContent)" explainText="$(string.b3DEnableContent_Help)" key="Software\Adobe\Adobe Acrobat\DC\3D" valueName="b3DEnableContent">
+      <parentCategory ref="CAT_Adobe_Acrobat_DC" />
+      <supportedOn ref="Adobe:SUPPORTED_001" />
+      <enabledValue><decimal value="1"/></enabledValue>
+      <disabledValue><decimal value="0"/></disabledValue>
+    </policy>
+    <policy name="bEnable3D" class="Machine" displayName="$(string.bEnable3D)" explainText="$(string.bEnable3D_Help)" key="Software\Policies\Adobe\Adobe Acrobat\DC\FeatureLockdown" valueName="bEnable3D">
+      <parentCategory ref="CAT_Adobe_Acrobat_DC_Lockable_Preferences" />
+      <supportedOn ref="Adobe:SUPPORTED_001" />
+      <enabledValue><decimal value="1"/></enabledValue>
+      <disabledValue><delete/></disabledValue>
+    </policy>
+  </policies>
+</policyDefinitions>

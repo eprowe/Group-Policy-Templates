@@ -1,36 +1,35 @@
 Group Policy Administrative Templates for Adobe Acrobat DC on 64-bit Windows.  Requires Adobe.adml and Adobe.admx files for proper operation.
 
-The settings for Acrobat can be found here: https://www.adobe.com/devnet-docs/acrobatetk/tools/PrefRef/Windows/index.html
-
 There is no plan to support older versions of Acrobat or 32-Bit Windows.
 
-Lockable preferences as documented here: https://www.adobe.com/devnet-docs/acrobatetk/tools/PrefRef/Windows/lockable.html
+Only supporting the lockable preferences documented here:
+* https://www.adobe.com/devnet-docs/acrobatetk/tools/PrefRef/Windows/lockable.html
+* https://www.adobe.com/devnet-docs/acrobatetk/tools/PrefRef/Windows/FeatureLockdown.html
 
 # Lockable Preferences: #
-* IsAMTEnforced
-* ADC4275034
-* ADC4275035 - In my testing I could not find any discernable difference if this policy was or wasn't enabled.
-* ADC4275035_ClickEdit - In my testing I could not find any discernable difference if this policy was or wasn't enabled.
-* ProtectOldExperience
+* IsAMTEnforced : Please note this is a preference and not a policy.
+* bPreviouslyEnabledSharePointInChromeExtn : Not included.  Flagged by Adobe as 'Not modifiable as the key is application or machine generated'.
 ## Actions (online resources) ##
-* bFindMoreWorkflowsOnline : Perhaps this was intended to hide a 'Find more online...' option from the drop down located at Tools > Action Wizard similarly to the bFindMoreCustomizationsOnline entry which hides a similar option from the drop down locate at Tools > Create Custom Tool.  This option may have been replace with the 'More Actions (Web)' button in the Action Wizard top toolbar.
+* bFindMoreWorkflowsOnline
 ## Actions (shared folders) ##
 * tDIPath
 * tName
 ## AppContainer ##
-* bEnableProtectedModeAppContainer - This policy is intended for Adobe Acrobat Reader
+* bEnableProtectedModeAppContainer : This policy is not supported by Adobe Acrobat Pro
+## Bates numbering ##
+* bBatesLogOriginalFileName
 ## Chrome Integration ##
 * bAcroSuppressOpenInReader
-* ENABLE_CHROMEEXT - This policy is intended for Adobe Acrobat Reader
+* ENABLE_CHROMEEXT : This policy is not supported by Adobe Acrobat Pro
 ## Context menus, tips, tools
-* bEnableContextualTips - In my testing I could not find any discernable difference if this policy was or wasn't enabled.
+* bEnableContextualTips
 * bEnableContextualToolbar
-* bEnableSmartFind
-* bOrganizePagesFromThumbnails - In my testing I could not find any discernable difference if this policy was or wasn't enabled.
+* bOrganizePagesFromThumbnails
 ## Create PDF ##
-* BlockEMFParsing
-* BlockXPSParsing
-* ExportEntireTableContent - Policy not implemented.  No information regarding this policy from Adobe.
+* bEnableFrictionlessInChromeExtn : This policy is not supported by Adobe Acrobat Pro
+* BlockEMFParsing : Please note this is a preference and not a policy.
+* BlockXPSParsing : Please note this is a preference and not a policy.
+* ExportEntireTableContent : Not included.  Flagged by Adobe as 'Not modifiable as the key is application or machine generated'.
 ## DC Fill & Sign Integration ##
 * bToggleFillSign
 * bToggleSendACopy
@@ -47,18 +46,17 @@ Lockable preferences as documented here: https://www.adobe.com/devnet-docs/acrob
 ## Document Message Bar ##
 * bSuppressMessageBar
 ## Editing Scanned PDFs ##
-* DisableScannedDocumentEditing
+* DisableScannedDocumentEditing : Please note this is a preference and not a policy.
 ## Enhanced Security ##
 * bEnhancedSecurityInBrowser
 * bEnhancedSecurityStandalone
 ##  Flash ##
 * bEnableFlash
 ## Form Preferences ##
-* bAutoFill - Version 8.0-9.0
+* bAutoFill : Not included.  Only applicable to versions 8.0-9.0.
 * bIgnoreDataSchema
 ## Home Screen and Startup ##
 * bToggleFTE
-* bToggleShareFeedback
 * bToggleToDoList
 * bToggleToDoTiles
 ## In Product Messaging ##
@@ -66,23 +64,25 @@ Lockable preferences as documented here: https://www.adobe.com/devnet-docs/acrob
 * bDontShowMsgWhenViewingDoc
 * bShowMsgAtLaunch
 ## Install details ##
-* Disable_Repair
-* DisableMaintenance
-* Path - Not modifiable as the key is application or machine generated.
+* Disable_Repair : Please note this is a preference and not a policy.
+* DisableMaintenance : Please note this is a preference and not a policy.
+* Path : Not included.  Flagged by Adobe as 'Not modifiable as the key is application or machine generated'.
 ## Miscellaneous Features ##
-* bCommercialPDF - Version 8.0-11.x
+* bCommercialPDF : Not included.  Only applicable to versions 8.0-11.x
 * bCrashReporterEnabled
-* bMergeMenuBar
+* bEnableAutoDockUndockHUD 
+* bMergeMenuBar : Please note this is a preference and not a policy.
 * bMixRecentFilesFeatureLockDown
-* bRegisterProduct - Version 6.0-9.x
+* bRegisterProduct : Not included.  Only applicable to versions 6.0-9.x
 * bShouldUseScalableCursor
-* bShowAdsAllow - Version 6.0-9.0
-* bShowEbookMenu - Version 9.0-11.x
+* bShowAdsAllow : Not included.  Only applicable to versions 6.0-9.0
+* bShowEbookMenu : Not included.  Only applicable to versions 9.0-11.x
+* bToggleBillingIssue
 * bWinCacheSessionHandles
 * dSplitBySizeMaxSize
 ## Mobile Link ##
 ## Network and Protocol Access ##
-Due to the poorly documented nature of the following settings I'm not going to include them in these template files.  The documentation is unclear on what these settings are, how they can be modified, or what each value should be configured as.  For example, tSchemePerms has what appears to be a list of URI Schemes followed by a number, but there is no indication what the number value represents.  A search seems to indicate that a 3 restricts the user of the protocol, but nothing about what a 1 does.  Additionally, Adobe indicates that these values may be regulary updated so it may be best to leave them for Adobe to manage.
+Due to the poorly documented nature of the following settings I'm not going to include them in these template files.  The documentation is unclear on what these settings are, how they can be modified, or how each value should be configured.  For example, tSchemePerms has what appears to be a list of URI Schemes followed by a number, but there is no indication what the number value represents.  A search seems to indicate that a 3 restricts the user of the protocol, but nothing about what a 1 does.  Additionally, Adobe indicates that these values may be regulary updated so it may be best to leave them for Adobe to manage.
 * cDefaultLaunchURLPerms
 * tFlashContentSchemeWhiteList
 * tSchemePerms
@@ -93,16 +93,27 @@ Due to the poorly documented nature of the following settings I'm not going to i
 * bDisablePDFRedirectionActions
 ## PDF Ownership ##
 * bDisablePDFHandlerSwitching
-* bEnableAcrobatPromptForDocOpen - This policy is intended for Adobe Acrobat Reader
+* bEnableAcrobatPromptForDocOpen : This policy is not supported by Adobe Acrobat Pro
 * bHasAcrobatConsent
 * bTogglePDFOwnershipToasts
+## Protected Mode ##
+* cJSEditor 
+* cProtectedModeConfigFiles : Not implemented, yet.  https://www.adobe.com/devnet-docs/acrobatetk/tools/AppSec/index.html
 ## Removing Tools ##
+Removing tools using these policies removes them from both the Tools tab and the right-hand pane as well.
 * a(index)
 * cDisabled
 ## Right-hand Tools Pane Customizations (DC) ##
-* a(index)
 * bDisableAcrobatShortcutCustomization
-* cFavorites
+## Search ##
+* bEnableAutoCompleteExactMatchLoader
+* bEnableAutoCompleteNoExactMatchHeader
+* bEnableAutoCompleteNoInternetConnectionHeader
+* bEnableCloudPoweredSearch
+* bEnableCloudPoweredSearchTokenCaching
+## Send usage data to Adobe ##
+* bEnableADMAnalytics
+* bToggleShareFeedback
 ## Services (Acrobat.com: 11.x and earlier) ##
 * bDisableADCFileStore
 * bEnableADCFileStore

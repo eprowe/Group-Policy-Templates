@@ -33,6 +33,10 @@
       <string id="SUPPORTED_026">DC 2018: Aug. 2018; DC 2017: May 2018 (both tracks)</string>
       <string id="SUPPORTED_027">DC products May 14, 2018+</string>
       <string id="SUPPORTED_028">10.0-DC</string>
+      <string id="SUPPORTED_029">November 2020 Continuous track</string>
+      <string id="SUPPORTED_030">February 9, 2021 Continuous track</string>
+      <string id="SUPPORTED_031">May 2020 Continuous track</string>
+      <string id="SUPPORTED_032">August 2020 Continuous track</string>
     </stringTable>
   </resources>
 </policyDefinitionResources>

@@ -34,6 +34,10 @@
       <definition name="SUPPORTED_026" displayName="$(string.SUPPORTED_026)" />
       <definition name="SUPPORTED_027" displayName="$(string.SUPPORTED_027)" />
       <definition name="SUPPORTED_028" displayName="$(string.SUPPORTED_028)" />
+      <definition name="SUPPORTED_029" displayName="$(string.SUPPORTED_029)" />
+      <definition name="SUPPORTED_030" displayName="$(string.SUPPORTED_030)" />
+      <definition name="SUPPORTED_031" displayName="$(string.SUPPORTED_031)" />
+      <definition name="SUPPORTED_032" displayName="$(string.SUPPORTED_032)" />
     </definitions>
   </supportedOn>
   <categories>

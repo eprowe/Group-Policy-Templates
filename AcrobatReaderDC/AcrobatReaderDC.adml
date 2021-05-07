@@ -5,6 +5,9 @@
   <resources>
     <stringTable>
       <string id="CAT_Adobe_Acrobat_Reader_DC">Adobe Acrobat Reader DC</string>
+      <string id="CAT_Adobe_Acrobat_Reader_DC_Lockable_Preferences">Lockable Preferences</string>
+      <string id="CAT_Adobe_Acrobat_Reader_DC_Modifiable_Preferences">Modifiable Preferences</string>
+      <string id="CAT_Adobe_Acrobat_Reader_DC_Hardening_Preferences">Security Hardening Preferences</string>
       <string id="bFindMoreWorkflowsOnline">Disable the menu that opens the online Actions file library</string>
       <string id="bFindMoreWorkflowsOnline_Help">Enabling this policy will disable the menu item that opens the online Actions file library.
 

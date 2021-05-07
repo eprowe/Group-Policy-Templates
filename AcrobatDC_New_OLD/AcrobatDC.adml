@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions" revision="1.0" schemaVersion="1.0">
+<displayName>Adobe Acrobat DC (Modern)</displayName>
+  <description>Adobe Acrobat DC</description>
+  <resources>
+    <stringTable>
+      <string id="CAT_Adobe_Acrobat_DC">Adobe Acrobat DC</string>
+      <string id="CAT_Adobe_Acrobat_DC_Lockable_Preferences">Lockable Preferences</string>
+      <string id="b3DEnableContent">Trust and render 3D content</string>
+      <string id="b3DEnableContent_Help">Enabling this policy configures Adobe Acrobat to trust and render 3D files.
+
+GUI Mapping: Edit > Preferences > 3D &#038; Multimedia > Enable playing of 3D content
+
+This policy modifies the following registry information:
+Key: HKCU\Software\Adobe\Adobe Acrobat\DC\3D
+Value: b3DEnableContent
+Type: DWORD
+Value: 0-Disabled (Default), 1-Enabled</string>
+      <string id="bEnable3D">Disable the GUI option 'Enable playing of 3D content'</string>
+      <string id="bEnable3D_Help">Enabling this policy will disable the GUI option 'Enable playing of 3D content' located at Edit > Preferences > 3D &#038; Multimedia.
+
+Combine this policy with the 'Trust and render 3D content' user policy to lock the preference completely.
+
+Disabling or not configuring this policy enables the GUI option.
+
+This policy modifies the following registry information:
+Key: HKLM\Software\Policies\Adobe\Adobe Acrobat\DC\FeatureLockdown
+Value: bEnable3D
+
+If enabled the value is set to 1, if disabled the bEnable3D value is deleted.</string>
+    </stringTable>
+  </resources>
+</policyDefinitionResources>

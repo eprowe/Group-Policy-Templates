@@ -10,11 +10,19 @@
     <category name="CAT_Adobe_Acrobat_Reader_DC" displayName="$(string.CAT_Adobe_Acrobat_Reader_DC)">
       <parentCategory ref="Adobe:Cat_Adobe"/>
     </category>
+    <category name="CAT_Adobe_Acrobat_Reader_DC_Lockable_Preferences" displayName="$(string.CAT_Adobe_Acrobat_Reader_DC_Lockable_Preferences)">
+      <parentCategory ref="CAT_Adobe_Acrobat_Reader_DC"/>
+    </category>
+    <category name="CAT_Adobe_Acrobat_Reader_DC_Modifiable_Preferences" displayName="$(string.CAT_Adobe_Acrobat_Reader_DC_Modifiable_Preferences)">
+      <parentCategory ref="CAT_Adobe_Acrobat_Reader_DC"/>
+    </category>
+    <category name="CAT_Adobe_Acrobat_Reader_DC_Hardening_Preferences" displayName="$(string.CAT_Adobe_Acrobat_Reader_DC_Hardening_Preferences)">
+      <parentCategory ref="CAT_Adobe_Acrobat_Reader_DC"/>
+    </category>
   </categories>
   <policies>
-    <!-- Lockable preferences as defined here: https://www.adobe.com/devnet-docs/acrobatetk/tools/PrefRef/Windows/lockable.html -->
     <policy name="bFindMoreWorkflowsOnline" class="Machine" displayName="$(string.bFindMoreWorkflowsOnline)" explainText="$(string.bFindMoreWorkflowsOnline_Help)" key="Software\Policies\Adobe\Acrobat Reader\DC\FeatureLockDown" valueName="bFindMoreWorkflowsOnline">
-      <parentCategory ref="CAT_Adobe_Acrobat_Reader_DC" />
+      <parentCategory ref="CAT_Adobe_Acrobat_Reader_DC_Lockable_Preferences" />
       <supportedOn ref="Adobe:SUPPORTED_A" />
       <enabledValue><decimal value="0"/></enabledValue>
       <disabledValue><decimal value="1"/></disabledValue>
